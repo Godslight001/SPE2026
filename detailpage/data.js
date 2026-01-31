@@ -183,12 +183,17 @@ function getPersonFromURL() {
 // Load and display person data
 function loadPersonData() {
     const personId = getPersonFromURL();
+    console.log('Looking for person ID:', personId);
+    console.log('Available IDs:', Object.keys(peopleData));
     const person = peopleData[personId];
 
     if (!person) {
-        document.body.innerHTML = '<section class="py-24 px-4 text-center"><h1 class="text-4xl font-bold text-red-500">Person not found</h1><p class="text-text-light mt-4"><a href="/" class="text-primary hover:underline">Return to home</a></p></section>';
+        console.error('Person not found for ID:', personId);
+        document.body.innerHTML = '<section class="py-24 px-4 text-center"><h1 class="text-4xl font-bold text-red-500">Person not found</h1><p class="text-slate-700 mt-4"><a href="/" class="text-primary hover:underline">Return to home</a></p></section>';
         return;
     }
+
+    console.log('Found person:', person.name);
 
     // Populate page with person data
     document.title = `${person.name} - SPE Symposium`;
