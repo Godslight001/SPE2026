@@ -10,7 +10,8 @@ const peopleData = {
         bio: 'Prof. Joseph A. Ajienka is a distinguished Professor of Petroleum Engineering with extensive experience in talent development within the energy sector. His expertise spans reservoir engineering, production optimization, and professional development programs for young engineers.',
         section: 'Panel',
         category: 'Expert',
-        contact: 'ajienka@university.edu'
+        contact: 'ajienka@university.edu',
+        linkedin: 'https://linkedin.com/in/josephajienka'
     },
     'maji': {
         name: 'Mojisola Iyamabo',
