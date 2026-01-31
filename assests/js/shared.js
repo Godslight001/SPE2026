@@ -79,6 +79,37 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 });
             }
+
+            // Update menu links for detail pages to navigate back to index
+            if (isDetailPage) {
+                // Update desktop menu links
+                const desktopLinks = headerContainer.querySelectorAll('ul.hidden.md\\:flex a');
+                desktopLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        link.href = '../index.html' + href;
+                    } else if (href === './committee.html') {
+                        link.href = '../detailpage/committee.html';
+                    }
+                });
+
+                // Update mobile menu links
+                const mobileLinks = headerContainer.querySelectorAll('#mobileMenu a');
+                mobileLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        link.href = '../index.html' + href;
+                    } else if (href === './committee.html') {
+                        link.href = '../detailpage/committee.html';
+                    }
+                });
+
+                // Update logo link to go to index
+                const logoLink = headerContainer.querySelector('a.flex.items-center');
+                if (logoLink && logoLink.getAttribute('href') === '#') {
+                    logoLink.href = '../index.html';
+                }
+            }
         })
         .catch(error => console.error('Error loading header:', error));
 
