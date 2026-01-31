@@ -405,35 +405,37 @@
     <!-- Scripts -->
     <script src="./data.js"></script>
     <script src="../assests/js/shared.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        AOS.init({
-            duration: 800,
-            once: true
+        // Initialize AOS after page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({
+                        duration: 800,
+                        once: true
+                    });
+                }
+            }, 100);
         });
 
+        // Also set up LinkedIn button click handlers after data.js populates the page
         document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 const linkedinBtn = document.getElementById('linkedinBtn');
                 const linkedinSidebar = document.getElementById('linkedinSidebar');
-                const personFocusInfo = document.getElementById('personFocusInfo');
-                const personSectionInfo = document.getElementById('personSectionInfo');
+                const params = new URLSearchParams(window.location.search);
+                const personId = params.get('id');
 
-                // Get current person data from data.js
-                const personId = new URLSearchParams(window.location.search).get('id');
-                const person = peopleData[personId];
-
-                if (person) {
-                    // Set LinkedIn URLs
+                if (personId && typeof peopleData !== 'undefined' && peopleData[personId]) {
+                    const person = peopleData[personId];
                     const linkedinUrl = person.linkedin || 'https://linkedin.com/company/spe';
+                    
                     if (linkedinBtn) linkedinBtn.href = linkedinUrl;
                     if (linkedinSidebar) linkedinSidebar.href = linkedinUrl;
-
-                    // Populate sidebar info
-                    if (personFocusInfo) personFocusInfo.textContent = person.focus;
-                    if (personSectionInfo) personSectionInfo.textContent = person.section;
                 }
-            }, 0);
+            }, 200);
         });
     </script>
 

@@ -205,8 +205,22 @@ function loadPersonData() {
     document.getElementById('personImage').alt = person.name;
     document.getElementById('personBio').textContent = person.bio;
     document.getElementById('personFocus').textContent = `${person.focus}`;
-    document.getElementById('personContact').textContent = person.contact || 'Contact: info@spesymposium.org';
     document.getElementById('personSection').textContent = person.section;
+    
+    // Populate sidebar info
+    if (document.getElementById('personFocusInfo')) {
+        document.getElementById('personFocusInfo').textContent = person.focus;
+    }
+    if (document.getElementById('personSectionInfo')) {
+        document.getElementById('personSectionInfo').textContent = person.section;
+    }
+    
+    // Set LinkedIn URLs
+    const linkedinUrl = person.linkedin || 'https://linkedin.com/company/spe';
+    const linkedinBtn = document.getElementById('linkedinBtn');
+    const linkedinSidebar = document.getElementById('linkedinSidebar');
+    if (linkedinBtn) linkedinBtn.href = linkedinUrl;
+    if (linkedinSidebar) linkedinSidebar.href = linkedinUrl;
 }
 
 // Initialize when DOM is ready
