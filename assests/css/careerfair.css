@@ -1,0 +1,82 @@
+.career-fair-container{
+    padding: 6vw 5vw;
+    color: white;
+    background-image: url("../img/bluebackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.careerFair-subtitle{
+    color: yellow;
+    margin-bottom: 2vw;
+}
+
+.flyer-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flyer{
+    width: 29vw;
+    height: 68vh;
+}
+
+.flyer-explain{
+    width: 55vw;
+    border: 1px solid palegoldenrod;
+    border-radius: 3vw;
+    padding: 1.2vw;
+}
+
+.energyChallenge-flyerExplain{
+    padding: 1vw;
+}
+
+.flyer-explain p{
+    text-align: center;
+}
+
+.flyer-explain p:nth-of-type(2){
+    color: yellow;
+}
+
+.careerFair-callToAction{
+    margin: auto;
+}
+
+@media only screen and (max-width: 600px)  {
+    .career-fair-container{
+        padding: 15vw 5vw 5vw;
+    }
+    
+    .flyer-row{
+        flex-direction: column;
+    }
+    
+    .flyer{
+        width: 100%;
+        height: 62vh;
+    }
+
+    .flyer-explain{
+        width: 100%;
+        margin-top: 2vh;
+    }
+
+    .section-subtitle{
+        font-size: 3.5vw;
+        margin-bottom: 4vw;
+    }
+
+    .flyer-item-list{
+        font-size: 3.2vw;
+    }
+
+    .debate-reg-button{
+        display: flex;
+        margin: auto;
+        font-size: 3.2vw;
+        margin-bottom: 5vw;
+    }
+}

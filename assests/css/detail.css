@@ -1,0 +1,116 @@
+.backbutton{
+    margin: 3vw 5vw 0!important;
+}
+
+.session-title{
+    text-align: center;
+    padding: 3vw;
+    margin-bottom: 0;
+}
+
+.session-synopsis{
+    text-align: justify;
+    margin: 0 3vw 3vw;
+    padding: 1vw;
+    font-size: 1.3vw;
+    background-color: gainsboro;
+}
+
+.speaker-title{
+    text-align: center;
+}
+
+.speaker-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw;
+}
+
+.speaker-image-container{
+    padding: auto;
+}
+
+.speaker-image{
+    width: 25vw;
+    height: 25vw;
+    display: block;
+}
+
+.speaker-bio{
+    width: 65vw;
+    display: flex;
+    text-align: justify;
+    font-size: 1.3vw;
+}
+
+.eze-detail{
+    display: initial;
+    font-size: 1vw;
+}
+
+.eze-detail ul{
+    margin-bottom: 0;
+}
+
+.linkedinLogo{
+    width: 4vw;
+    height: 4vw;
+}
+
+@media only screen and (max-width: 600px)  {
+    .session-title{
+        font-size: 5vw;
+    }
+
+    .session-synopsis{
+        margin-bottom: 10vw;
+        font-size: 3.5vw;
+        margin: 0 4vw 3vw;
+        padding: 4vw;
+    }
+    
+    .speaker-container{
+        padding: 5vw 5vw 0;
+    }
+    
+    .backbutton{
+        margin: 5vw auto!important;
+        display: flex!important;
+        font-size: 3vw!important;
+    }
+
+    .speaker-title{
+        padding: 0 3vw;
+    }
+
+    .speaker-title h4{
+        font-size: 4vw;
+    }
+    
+    .speaker-title h5{
+        font-size: 3.5vw;
+    }
+
+    .speaker-container{
+        flex-direction: column;
+    }
+
+    .speaker-image{
+        width: 55vw;
+        height: 55vw;
+        margin: auto;
+    }
+    
+    .linkedinLogo{
+        width: 9vw;
+        height: 9vw;
+        margin: auto;
+        display: flex;
+    }
+
+    .speaker-bio{
+        width: 100%;
+        font-size: 3.5vw;
+        flex-direction: column;
+    }
+}

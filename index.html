@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO & Branding -->
+    <link rel="icon" href="assests/img/spelogo.png">
+    <title>SPE YP Symposium 2025 - Young Professional Excellence in Energy</title>
+
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#667eea',
+                        'primary-dark': '#764ba2',
+                        accent: '#f5576c',
+                        'dark-bg': '#0f172a',
+                        'light-bg': '#1e293b',
+                        'text-light': '#e2e8f0',
+                        'text-muted': '#a0aec0',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Swiper Carousel CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Custom Animations -->
+    <style>
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(20px);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .animate-float-reverse {
+            animation: float 8s ease-in-out infinite reverse;
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-link-underline::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #f5576c);
+            transition: all 0.3s;
+            transform: translateX(-50%);
+        }
+        
+        .nav-link-underline:hover::after {
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-dark-bg via-slate-900 to-slate-800 text-text-light overflow-x-hidden">
+
+    <!-- Modern Navigation -->
+    <nav class="sticky top-0 z-50 bg-slate-950 bg-opacity-95 backdrop-blur-md border-b border-primary border-opacity-20 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center gap-4 group">
+                    <img src="./assests/img/spelogo.png" alt="SPE Logo" class="h-12 w-auto group-hover:scale-105 transition-transform duration-300">
+                    <div class="text-sm hidden sm:block">
+                        <p class="m-0 font-semibold text-primary text-xs leading-tight">Society of Petroleum Engineers</p>
+                        <p class="m-0 text-text-muted text-xs leading-tight">Port Harcourt, Nigeria (Section 103)</p>
+                    </div>
+                </a>
+
+                <button class="md:hidden text-primary border border-primary rounded p-2" aria-label="Menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+
+                <ul class="hidden md:flex items-center gap-0.5">
+                    <li><a href="#panel-section" class="text-text-light font-medium px-3 py-2 hover:text-primary transition nav-link-underline relative">Panel</a></li>
+                    <li><a href="#breakout-section" class="text-text-light font-medium px-3 py-2 hover:text-primary transition nav-link-underline relative">Breakout</a></li>
+                    <li><a href="#shortCourse-section" class="text-text-light font-medium px-3 py-2 hover:text-primary transition nav-link-underline relative">Courses</a></li>
+                    <li><a href="#energyChallenge-section" class="text-text-light font-medium px-3 py-2 hover:text-primary transition nav-link-underline relative">Challenge</a></li>
+                    <li><a href="#career-fair-section" class="text-text-light font-medium px-3 py-2 hover:text-primary transition nav-link-underline relative">Career</a></li>
+                    <li><a href="#debate-section" class="text-text-light font-medium px-3 py-2 hover:text-primary transition nav-link-underline relative">Debate</a></li>
+                    <li><a href="./detailpage/committee.html" class="text-text-light font-medium px-3 py-2 hover:text-primary transition nav-link-underline relative">Committee</a></li>
+                    <li><a href="https://www.spe.org/en/" class="text-text-light font-medium px-3 py-2 hover:text-primary transition nav-link-underline relative">About</a></li>
+                    <li class="ml-2">
+                        <a href="https://paystack.com/pay/walqfu4csm" target="_blank" class="inline-block bg-gradient-to-r from-primary to-primary-dark text-white font-semibold px-5 py-2 rounded-lg hover:shadow-xl hover:shadow-primary/30 transition duration-300">
+                            REGISTER
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Image Slider Section -->
+    <section class="relative h-96 sm:h-screen bg-gradient-to-br from-dark-bg via-slate-900 to-slate-800 overflow-hidden pt-20">
+        <div class="swiper hero-slider absolute inset-0 z-0" style="width: 100%; height: 100%; margin-top: -80px;">
+            <div class="swiper-wrapper h-full">
+                <div class="swiper-slide">
+                    <div class="relative w-full h-full">
+                        <img src="./assests/img/bgImage2.jpg" alt="Event Moment 1" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900/50 to-slate-900/30"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="relative w-full h-full">
+                        <img src="./assests/img/bgImage3.jpg" alt="Event Moment 2" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900/50 to-slate-900/30"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="relative w-full h-full">
+                        <img src="./assests/img/bgimage7.jpg" alt="Event Moment 3" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900/50 to-slate-900/30"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Navigation - Inside Swiper -->
+            <div class="swiper-button-prev !hidden"></div>
+            <div class="swiper-button-next !hidden"></div>
+
+            <!-- Slider Pagination -->
+            <div class="swiper-pagination absolute bottom-8 left-1/2 -translate-x-1/2 z-20"></div>
+        </div>
+
+        <!-- Dark Overlay on Left for Text Visibility - Always Visible -->
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/30 to-transparent z-5 pointer-events-none"></div>
+
+        <!-- Slider Text Content - Always Visible -->
+        <div class="absolute inset-0 z-20 flex items-center justify-start pl-3 sm:pl-6 md:pl-10 lg:pl-16 pt-16 sm:pt-20 md:pt-24 pointer-events-none">
+            <h1 class="font-poppins text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-tight max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl animate-fade-in-up drop-shadow-2xl">
+                2026 YOUNG<br class="hidden sm:block">PROFESSIONAL<br class="hidden sm:block">SYMPOSIUM
+            </h1>
+        </div>
+
+        <!-- Custom Slider Navigation Buttons -->
+        <button class="hero-prev absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-full flex items-center justify-center transition cursor-pointer backdrop-blur-sm">
+            <i class="fas fa-chevron-left text-white text-xl"></i>
+        </button>
+        <button class="hero-next absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-full flex items-center justify-center transition cursor-pointer backdrop-blur-sm">
+            <i class="fas fa-chevron-right text-white text-xl"></i>
+        </button>
+    </section>
+
+    <!-- Hero Content Section -->
+    <section class="relative bg-gradient-to-br from-dark-bg via-slate-900 to-slate-800 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 overflow-hidden">
+
+        <!-- Background Shapes -->
+        <div class="absolute top-0 left-0 right-0 bottom-0 overflow-hidden z-0 pointer-events-none">
+            <div class="absolute top-20 left-10 w-96 h-96 rounded-full bg-primary bg-opacity-10 blur-3xl animate-float"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-accent bg-opacity-10 blur-3xl animate-float-reverse"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-4xl mx-auto text-center animate-fade-in-up">
+            <div class="inline-block mb-6 px-5 py-2 rounded-full border border-primary border-opacity-30 bg-primary bg-opacity-10 backdrop-blur-sm">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">2025 YOUNG PROFESSIONAL SYMPOSIUM</span>
+            </div>
+
+            <h1 class="font-poppins text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight gradient-text">
+                Optimizing Energy's Future
+            </h1>
+
+            <p class="text-lg sm:text-xl text-text-light mb-12 leading-relaxed max-w-2xl mx-auto backdrop-blur-sm">
+                Join industry leaders, innovators, and young professionals exploring sustainable solutions in midstream and downstream value chains.
+            </p>
+
+            <!-- Info Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12 max-w-2xl mx-auto">
+                <div class="bg-primary bg-opacity-10 border border-primary border-opacity-30 rounded-xl p-5 backdrop-blur-md hover:bg-opacity-20 hover:border-opacity-50 transition transform hover:-translate-y-1">
+                    <p class="text-text-light text-xs uppercase tracking-wider font-semibold mb-2">📍 Location</p>
+                    <p class="text-white font-semibold">Shell Residential Area, PH</p>
+                </div>
+                <div class="bg-primary bg-opacity-10 border border-primary border-opacity-30 rounded-xl p-5 backdrop-blur-md hover:bg-opacity-20 hover:border-opacity-50 transition transform hover:-translate-y-1">
+                    <p class="text-text-light text-xs uppercase tracking-wider font-semibold mb-2">🎓 Virtual Sessions</p>
+                    <p class="text-white font-semibold">April 24-25</p>
+                </div>
+                <div class="bg-primary bg-opacity-10 border border-primary border-opacity-30 rounded-xl p-5 backdrop-blur-md hover:bg-opacity-20 hover:border-opacity-50 transition transform hover:-translate-y-1">
+                    <p class="text-text-light text-xs uppercase tracking-wider font-semibold mb-2">🎯 Main Event</p>
+                    <p class="text-white font-semibold">April 26, 2025</p>
+                </div>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="mb-12 max-w-3xl mx-auto">
+                <div class="text-center mb-8">
+                    <p class="text-text-muted text-sm sm:text-base uppercase tracking-widest font-semibold mb-2">Time Until Symposium</p>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white mb-1">Event Countdown</h3>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 px-2 sm:px-0">
+                    <!-- Days -->
+                    <div class="group relative rounded-2xl overflow-hidden backdrop-blur-sm" data-aos="flip-left">
+                        <div class="absolute inset-0 bg-gradient-to-br from-accent via-primary to-primary-dark opacity-0 group-hover:opacity-20 transition duration-500"></div>
+                        <div class="relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 border-2 border-accent border-opacity-40 group-hover:border-opacity-80 rounded-2xl p-4 sm:p-5 lg:p-6 text-center transition duration-300 transform group-hover:scale-105 group-hover:-translate-y-1 overflow-hidden">
+                            <span id="cd1" class="block text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-accent via-pink-400 to-red-500 font-poppins drop-shadow-lg mb-1 leading-tight">00</span>
+                            <span class="text-text-light text-xs sm:text-xs uppercase tracking-wide font-bold block">Days</span>
+                            <div class="absolute top-2 right-2 w-1 h-1 rounded-full bg-accent opacity-0 group-hover:opacity-100 transition animate-pulse"></div>
+                        </div>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="group relative rounded-2xl overflow-hidden backdrop-blur-sm" data-aos="flip-left" data-aos-delay="100">
+                        <div class="absolute inset-0 bg-gradient-to-br from-accent via-primary to-primary-dark opacity-0 group-hover:opacity-20 transition duration-500"></div>
+                        <div class="relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 border-2 border-primary border-opacity-40 group-hover:border-opacity-80 rounded-2xl p-4 sm:p-5 lg:p-6 text-center transition duration-300 transform group-hover:scale-105 group-hover:-translate-y-1 overflow-hidden">
+                            <span id="cd2" class="block text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-primary via-blue-400 to-purple-500 font-poppins drop-shadow-lg mb-1 leading-tight">00</span>
+                            <span class="text-text-light text-xs sm:text-xs uppercase tracking-wide font-bold block">Hours</span>
+                            <div class="absolute top-2 right-2 w-1 h-1 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition animate-pulse"></div>
+                        </div>
+                    </div>
+
+                    <!-- Minutes -->
+                    <div class="group relative rounded-2xl overflow-hidden backdrop-blur-sm" data-aos="flip-left" data-aos-delay="200">
+                        <div class="absolute inset-0 bg-gradient-to-br from-accent via-primary to-primary-dark opacity-0 group-hover:opacity-20 transition duration-500"></div>
+                        <div class="relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 border-2 border-accent border-opacity-40 group-hover:border-opacity-80 rounded-2xl p-4 sm:p-5 lg:p-6 text-center transition duration-300 transform group-hover:scale-105 group-hover:-translate-y-1 overflow-hidden">
+                            <span id="cd3" class="block text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-accent via-orange-400 to-red-500 font-poppins drop-shadow-lg mb-1 leading-tight">00</span>
+                            <span class="text-text-light text-xs sm:text-xs uppercase tracking-wide font-bold block">Minutes</span>
+                            <div class="absolute top-2 right-2 w-1 h-1 rounded-full bg-accent opacity-0 group-hover:opacity-100 transition animate-pulse"></div>
+                        </div>
+                    </div>
+
+                    <!-- Seconds -->
+                    <div class="group relative rounded-2xl overflow-hidden backdrop-blur-sm" data-aos="flip-left" data-aos-delay="300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-accent via-primary to-primary-dark opacity-0 group-hover:opacity-20 transition duration-500"></div>
+                        <div class="relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 border-2 border-primary border-opacity-40 group-hover:border-opacity-80 rounded-2xl p-4 sm:p-5 lg:p-6 text-center transition duration-300 transform group-hover:scale-105 group-hover:-translate-y-1 overflow-hidden">
+                            <span id="cd4" class="block text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-primary via-cyan-400 to-blue-500 font-poppins drop-shadow-lg mb-1 leading-tight">00</span>
+                            <span class="text-text-light text-xs sm:text-xs uppercase tracking-wide font-bold block">Seconds</span>
+                            <div class="absolute top-2 right-2 w-1 h-1 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition animate-pulse"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
+                    <a href="https://paystack.com/pay/walqfu4csm" target="_blank" class="inline-block bg-gradient-to-r from-primary to-primary-dark text-white font-semibold px-8 py-3 rounded-lg hover:shadow-xl hover:shadow-primary/50 transition duration-300 transform hover:-translate-y-1 backdrop-blur-sm">
+                        <i class="fas fa-ticket-alt mr-2"></i> Register
+                    </a>
+                    <a href="https://getdp.co/NzH" target="_blank" class="inline-block bg-transparent border-2 border-primary text-white font-semibold px-8 py-3 rounded-lg hover:bg-primary hover:bg-opacity-10 transition duration-300 backdrop-blur-sm">
+                        <i class="fas fa-image mr-2"></i> Create Flyer
+                    </a>
+                    <a href="./assests/brochure.pdf" download class="inline-block bg-transparent border-2 border-accent text-white font-semibold px-8 py-3 rounded-lg hover:bg-accent hover:bg-opacity-10 transition duration-300 backdrop-blur-sm">
+                        <i class="fas fa-download mr-2"></i> Brochure
+                    </a>
+                </div>
+            </div>
+    </section>
+
+    <!-- Theme Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-white border-t border-b border-slate-200">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-poppins text-4xl font-bold mb-6 text-slate-900">
+                        <span class="text-primary">Theme:</span> Energy Professionals Role
+                    </h2>
+                    <p class="text-slate-700 leading-relaxed mb-4">
+                        In the complex and evolving landscape of the energy industry, optimizing the midstream and downstream value chain has become essential for sustaining growth, enhancing efficiency, and meeting global energy needs responsibly.
+                    </p>
+                    <p class="text-slate-700 leading-relaxed mb-4">
+                        The energy sector's midstream and downstream operations are critical touchpoints that influence everything from energy accessibility and affordability, to environmental impact and economic stability.
+                    </p>
+                    <p class="text-slate-700 leading-relaxed">
+                        This symposium brings together young professionals, industry experts, and thought leaders to explore solutions that ensure a resilient, sustainable future for the energy sector.
+                    </p>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-2xl shadow-primary/20">
+                    <img src="./assests/img/main flyer.jpg" alt="Symposium Theme" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Host Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50" id="host-section">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">LEADERSHIP</span>
+                <h2 class="font-poppins text-4xl font-bold mt-3 mb-4 text-slate-900">Meet Our Distinguished Hosts</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <div class="group rounded-2xl overflow-hidden border border-slate-300 bg-white hover:border-primary hover:shadow-lg transition duration-300 transform hover:-translate-y-2" data-aos="fade-up">
+                    <img src="./assests/img/Abiye 1.jpeg.jpg" alt="Sir Abiye Pedro" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-poppins text-xl font-bold text-slate-900 mb-2">Sir Abiye Pedro</h3>
+                        <p class="text-primary font-semibold text-sm mb-3">SPES103 Section Chair</p>
+                        <p class="text-slate-700 text-sm mb-4">Visionary leader guiding the future of petroleum professionals.</p>
+                        <a href="./detailpage/abiye.html" class="text-primary font-semibold hover:text-accent transition">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group rounded-2xl overflow-hidden border border-slate-300 bg-white hover:border-primary hover:shadow-lg transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./assests/img/Olivier Houze.jpg" alt="Mr Olivier Houze" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-poppins text-xl font-bold text-slate-900 mb-2">Mr Olivier Houze</h3>
+                        <p class="text-primary font-semibold text-sm mb-3">SPE International President</p>
+                        <p class="text-slate-700 text-sm mb-4">Leading global advocacy for petroleum professionals.</p>
+                        <a href="./detailpage/olivier.html" class="text-primary font-semibold hover:text-accent transition">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Guests Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-dark-bg via-slate-900 to-slate-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-accent font-bold text-sm tracking-widest uppercase">DISTINGUISHED GUESTS</span>
+                <h2 class="font-poppins text-4xl font-bold mt-3 mb-4 text-white">Special Guests of Honour</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up">
+                    <img src="./assests/img/Riverson Oppong.jpg" alt="Dr Riverson Oppong" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-poppins text-xl font-bold text-text-light mb-2">Dr Riverson Oppong</h3>
+                        <p class="text-accent font-semibold text-sm mb-3">SPE Africa Regional Director</p>
+                        <p class="text-text-muted text-sm mb-4">With decades of global experience in oil & gas.</p>
+                        <a href="./detailpage/riverson.html" class="text-primary font-semibold hover:text-accent transition">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./assests/img/Amina Danmadami.jpg" alt="Mrs Amina Danmadami" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-poppins text-xl font-bold text-text-light mb-2">Engr. Amina Danmadami, PhD</h3>
+                        <p class="text-accent font-semibold text-sm mb-3">SPE Nigerian Council Chair</p>
+                        <p class="text-text-muted text-sm mb-4">Chemical Engineer leading Nigerian regulatory authority.</p>
+                        <a href="./detailpage/amina.html" class="text-primary font-semibold hover:text-accent transition">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Panel Session -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8" id="panel-section">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">EXPERT VOICES</span>
+                <h2 class="font-poppins text-4xl font-bold mt-3 mb-4 text-text-light">Panel Session</h2>
+                <p class="text-text-muted text-lg max-w-2xl mx-auto">Meet our distinguished panelists bringing expertise and insights</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up">
+                    <img src="./assests/img/Joseph A. Ajienka.png" alt="Prof. Joseph A. Ajienka" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-poppins text-lg font-bold text-text-light mb-2">Prof. Joseph A. Ajienka</h3>
+                        <p class="text-primary font-semibold text-sm mb-3">Professor of Petroleum Engineering</p>
+                        <p class="text-text-muted text-sm mb-4"><strong>Focus:</strong> Talent Development</p>
+                        <a href="./detailpage/ajienka.html" class="text-primary font-semibold hover:text-accent transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./assests/img/Mojisola Iyamabo.jpg" alt="Mojisola Iyamabo" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-poppins text-lg font-bold text-text-light mb-2">Mojisola Iyamabo</h3>
+                        <p class="text-primary font-semibold text-sm mb-3">Gas Consultant, Heirs Energies</p>
+                        <p class="text-text-muted text-sm mb-4"><strong>Focus:</strong> Feedstock Supply</p>
+                        <a href="./detailpage/maji.html" class="text-primary font-semibold hover:text-accent transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./assests/img/austin.jpg" alt="Mr. Austin Ogbogbo" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-poppins text-lg font-bold text-text-light mb-2">Mr. Austin Ogbogbo</h3>
+                        <p class="text-primary font-semibold text-sm mb-3">Asset Manager, NLNG</p>
+                        <p class="text-text-muted text-sm mb-4"><strong>Focus:</strong> Midstream Development</p>
+                        <a href="./detailpage/austin.html" class="text-primary font-semibold hover:text-accent transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <img src="./assests/img/Sir. Bennett Brown.jpg" alt="Sir. Bennett Brown" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-poppins text-lg font-bold text-text-light mb-2">Sir. Bennett Brown</h3>
+                        <p class="text-primary font-semibold text-sm mb-3">Asst. Director, NMDPRA</p>
+                        <p class="text-text-muted text-sm mb-4"><strong>Focus:</strong> Regulatory Framework</p>
+                        <a href="./detailpage/brown.html" class="text-primary font-semibold hover:text-accent transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+                    <img src="./assests/img/Dr Toyin Odutola.jpg" alt="Dr. Toyin Odutola" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-poppins text-lg font-bold text-text-light mb-2">Dr. Toyin Odutola</h3>
+                        <p class="text-primary font-semibold text-sm mb-3">Asst. Director, Emerald Energy</p>
+                        <p class="text-text-muted text-sm mb-4"><strong>Role:</strong> Panel Moderator</p>
+                        <a href="./detailpage/toyin.html" class="text-primary font-semibold hover:text-accent transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breakout Session -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50" id="breakout-section">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">SPECIALIZED WORKSHOPS</span>
+                <h2 class="font-poppins text-4xl font-bold mt-3 mb-4 text-slate-900">Breakout Sessions</h2>
+                <p class="text-slate-700 text-lg max-w-2xl mx-auto">Discuss with Subject Matter Experts</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group rounded-2xl overflow-hidden border border-slate-300 bg-white hover:border-primary hover:shadow-lg transition duration-300 transform hover:-translate-y-2" data-aos="fade-up">
+                    <img src="./assests/img/Bobmanuel_Sepribo_Nelson.JPG" alt="Mr. Sepribo N. Bobmanuel" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-poppins text-lg font-bold text-slate-900 mb-2">Mr. Sepribo N. Bobmanuel</h3>
+                        <p class="text-primary font-semibold text-sm mb-3">Process Engineer, Dangote Refinery</p>
+                        <p class="text-slate-700 text-sm mb-4"><strong>Session:</strong> Refined Crude Oil Pricing</p>
+                        <a href="./detailpage/bob.html" class="text-primary font-semibold hover:text-accent transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="group rounded-2xl overflow-hidden border border-slate-300 bg-white hover:border-primary hover:shadow-lg transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./assests/img/Picture1.jpg" alt="Mr. Vincent Chukwudi Ndu" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-poppins text-lg font-bold text-slate-900 mb-2">Mr. Vincent Chukwudi Ndu</h3>
+                        <p class="text-primary font-semibold text-sm mb-3">CNG Operations Supervisor</p>
+                        <p class="text-slate-700 text-sm mb-4"><strong>Session:</strong> Sustainable CNG Ecosystem</p>
+                        <a href="./detailpage/Chukwudi.html" class="text-primary font-semibold hover:text-accent transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="group rounded-2xl overflow-hidden border border-slate-300 bg-white hover:border-primary hover:shadow-lg transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./assests/img/Ezeoma_Ray_.jpg" alt="Engr. Ezeoma Raymond" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-poppins text-lg font-bold text-slate-900 mb-2">Engr. Ezeoma Raymond</h3>
+                        <p class="text-primary font-semibold text-sm mb-3">Metering Engineer, TotalEnergies</p>
+                        <p class="text-slate-700 text-sm mb-4"><strong>Session:</strong> Digital Transformation</p>
+                        <a href="./detailpage/raymond.html" class="text-primary font-semibold hover:text-accent transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Short Courses -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-dark-bg via-slate-900 to-slate-800" id="shortCourse-section">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">PROFESSIONAL DEVELOPMENT</span>
+                <h2 class="font-poppins text-4xl font-bold mt-3 mb-4 text-text-light">Short Courses</h2>
+                <p class="text-text-muted text-lg max-w-2xl mx-auto">Join intensive courses in your favorite area</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up">
+                    <img src="./assests/img/Picture2.jpg" alt="Dr. Olatunde Mosobalaje" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-poppins text-lg font-bold text-text-light mb-2">Dr. Olatunde Mosobalaje</h3>
+                        <p class="text-accent font-semibold text-sm mb-3">Senior Lecturer, Covenant University</p>
+                        <p class="text-text-muted text-sm mb-4"><strong>Course:</strong> AI & Process Automation</p>
+                        <a href="./detailpage/ola.html" class="text-primary font-semibold hover:text-accent transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./assests/img/chisom.png" alt="Engr. Chisom Njoku" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-poppins text-lg font-bold text-text-light mb-2">Engr. Chisom Njoku</h3>
+                        <p class="text-accent font-semibold text-sm mb-3">Managing Consultant, Somit Services</p>
+                        <p class="text-text-muted text-sm mb-4"><strong>Course:</strong> Product Development</p>
+                        <a href="./detailpage/chisom.html" class="text-primary font-semibold hover:text-accent transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./assests/img/Franklin Passport.jpg" alt="Mr. Franklin Fidelis" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-poppins text-lg font-bold text-text-light mb-2">Mr. Franklin Fidelis</h3>
+                        <p class="text-accent font-semibold text-sm mb-3">Process Analyst, Aradel Holdings</p>
+                        <p class="text-text-muted text-sm mb-4"><strong>Course:</strong> Refinery Process Efficiency</p>
+                        <a href="./detailpage/franklin.html" class="text-primary font-semibold hover:text-accent transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <img src="./assests/img/fine.jpg" alt="Gloria Ayodeji-Fapohunda" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-poppins text-lg font-bold text-text-light mb-2">Gloria Ayodeji-Fapohunda</h3>
+                        <p class="text-accent font-semibold text-sm mb-3">HSE Specialist, TotalEnergies</p>
+                        <p class="text-text-muted text-sm mb-4"><strong>Course:</strong> Safety & Enviro Mgmt</p>
+                        <a href="./detailpage/gloria.html" class="text-primary font-semibold hover:text-accent transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Energy Challenge Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-dark-bg via-slate-900 to-slate-800" id="energyChallenge-section">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-accent font-bold text-sm tracking-widest uppercase">INNOVATION COMPETITION</span>
+                <h2 class="font-poppins text-4xl font-bold mt-3 mb-4 text-white">The Energy Challenge</h2>
+                <p class="text-text-light text-lg">Showcase your digital solutions to transform energy</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="rounded-2xl overflow-hidden shadow-2xl shadow-primary/20">
+                    <img src="./assests/img/energy challenge.jpg" alt="Energy Challenge" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h3 class="font-poppins text-2xl font-bold mb-4 text-text-light">Transform Energy with Innovation</h3>
+                    <p class="text-text-muted leading-relaxed mb-4">
+                        Apply your passion and knowledge to proffer digital solutions in these areas:
+                    </p>
+                    <ul class="space-y-3 mb-6 text-text-muted">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-primary mt-1"></i>
+                            <span>Exploration & Production Solutions</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-primary mt-1"></i>
+                            <span>Operations & Maintenance Automation</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-primary mt-1"></i>
+                            <span>Big Data Analytics & Cloud Computing</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-primary mt-1"></i>
+                            <span>Environmental Sustainability & CCUS</span>
+                        </li>
+                    </ul>
+
+                    <div class="bg-primary bg-opacity-5 border border-primary border-opacity-20 rounded-xl p-6 mb-6">
+                        <h4 class="font-poppins font-bold text-text-light mb-4">Challenge Timeline</h4>
+                        <div class="space-y-3 text-text-muted text-sm">
+                            <div><strong class="text-primary">Stage 1:</strong> 3rd March - 4th April (Submit plans)</div>
+                            <div><strong class="text-primary">Stage 2:</strong> 5th - 19th April (60-sec presentation)</div>
+                            <div><strong class="text-primary">Stage 3:</strong> April 26th (Final pitch)</div>
+                        </div>
+                    </div>
+
+                    <a href="https://bit.ly/SPE-EnergyChallenge" target="_blank" class="inline-block bg-gradient-to-r from-primary to-primary-dark text-white font-semibold px-8 py-3 rounded-lg hover:shadow-xl hover:shadow-primary/50 transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-rocket mr-2"></i> Register for Challenge
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Fair Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50" id="career-fair-section">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">CAREER OPPORTUNITIES</span>
+                <h2 class="font-poppins text-4xl font-bold mt-3 mb-4 text-slate-900">Career Fair</h2>
+                <p class="text-slate-700 text-lg">Meet and interact with leading employers</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="rounded-2xl overflow-hidden shadow-2xl shadow-primary/20 order-2 lg:order-1">
+                    <img src="./assests/img/career fair.jpg" alt="Career Fair" class="w-full h-full object-cover">
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h3 class="font-poppins text-2xl font-bold mb-4 text-slate-900">Unlock Your Career Potential</h3>
+                    <p class="text-slate-700 leading-relaxed mb-4">
+                        Connect with potential employers, learn about career options, and increase your chances of landing your dream job.
+                    </p>
+                    <p class="text-slate-900 font-semibold mb-4">What You'll Experience:</p>
+                    <ul class="space-y-2 mb-8 text-slate-700">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-briefcase text-primary"></i> Employment Opportunities
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-file-alt text-primary"></i> Professional CV Reviews
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-microphone text-primary"></i> Career Talks
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-brain text-primary"></i> Skill Assessment
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-trophy text-primary"></i> Games & Prizes
+                        </li>
+                    </ul>
+                    <a href="https://paystack.com/pay/walqfu4csm" target="_blank" class="inline-block bg-gradient-to-r from-primary to-primary-dark text-white font-semibold px-8 py-3 rounded-lg hover:shadow-xl hover:shadow-primary/50 transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-user-tie mr-2"></i> Register for Career Fair
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Debate Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-dark-bg via-slate-900 to-slate-800" id="debate-section">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">INTELLECTUAL ENGAGEMENT</span>
+                <h2 class="font-poppins text-4xl font-bold mt-3 mb-4 text-text-light">Debate Competition</h2>
+                <p class="text-text-muted text-lg">Compete in debate on Nigeria's energy future</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="rounded-2xl overflow-hidden shadow-2xl shadow-primary/20">
+                    <img src="./assests/img/debate.jpg" alt="Debate" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h3 class="font-poppins text-2xl font-bold mb-4 text-text-light">Nigeria's Energy Future Roadblock</h3>
+                    <p class="text-accent font-semibold mb-4">
+                        <strong>Topic:</strong><br/>Regulatory Framework vs Infrastructure Development
+                    </p>
+                    <p class="text-text-muted leading-relaxed mb-6">
+                        Analyze the most pressing challenges facing Nigeria's midstream and downstream value chains.
+                    </p>
+
+                    <div class="bg-accent bg-opacity-5 border border-accent border-opacity-20 rounded-xl p-6 mb-6">
+                        <h4 class="font-poppins font-bold text-text-light mb-4">Registration Steps</h4>
+                        <ol class="space-y-2 text-text-muted list-decimal list-inside text-sm">
+                            <li>Register for the main symposium</li>
+                            <li>Complete the debate registration form</li>
+                            <li>Selected participants will be contacted</li>
+                            <li>Entry closes: March 15th, 2025</li>
+                        </ol>
+                    </div>
+
+                    <a href="https://bit.ly/SPE-debate" target="_blank" class="inline-block bg-gradient-to-r from-primary to-primary-dark text-white font-semibold px-8 py-3 rounded-lg hover:shadow-xl hover:shadow-primary/50 transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-comments mr-2"></i> Register for Debate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Committee Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-dark-bg via-slate-900 to-slate-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">ORGANIZING TEAM</span>
+                <h2 class="font-poppins text-4xl font-bold mt-3 mb-4 text-text-light">Meet Our Committee</h2>
+                <p class="text-text-muted text-lg max-w-2xl mx-auto">Dedicated professionals making the symposium happen</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Joshua Atte -->
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up">
+                    <img src="./assests/img/1.jpg" alt="Joshua Atte" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-poppins text-lg font-bold text-text-light mb-1">Joshua Atte</h3>
+                        <p class="text-primary font-semibold text-xs mb-2">Symposium Chair</p>
+                        <p class="text-text-muted text-xs">Sponsorship Lead</p>
+                    </div>
+                </div>
+
+                <!-- Deborah Yeezor -->
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="50">
+                    <img src="./assests/img/2.jpg" alt="Deborah Yeezor" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-poppins text-lg font-bold text-text-light mb-1">Deborah Yeezor</h3>
+                        <p class="text-primary font-semibold text-xs mb-2">Symposium Co-chair</p>
+                        <p class="text-text-muted text-xs">Programs Team Lead</p>
+                    </div>
+                </div>
+
+                <!-- Emmanuella Agbo -->
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./assests/img/3.jpg" alt="Emmanuella Agbo" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-poppins text-lg font-bold text-text-light mb-1">Emmanuella Agbo</h3>
+                        <p class="text-primary font-semibold text-xs mb-2">YP Chairperson</p>
+                        <p class="text-text-muted text-xs">Leadership</p>
+                    </div>
+                </div>
+
+                <!-- Oloruntoba Isehunwa -->
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="150">
+                    <img src="./assests/img/4.jpg" alt="Oloruntoba Isehunwa" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-poppins text-lg font-bold text-text-light mb-1">Oloruntoba Isehunwa</h3>
+                        <p class="text-primary font-semibold text-xs mb-2">Sponsorship Advisor</p>
+                        <p class="text-text-muted text-xs">Partnerships</p>
+                    </div>
+                </div>
+
+                <!-- Joel Okoh -->
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./assests/img/5.jpg" alt="Joel Okoh" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-poppins text-lg font-bold text-text-light mb-1">Joel Okoh</h3>
+                        <p class="text-primary font-semibold text-xs mb-2">Short Courses</p>
+                        <p class="text-text-muted text-xs">Team Lead</p>
+                    </div>
+                </div>
+
+                <!-- James Alleh -->
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="250">
+                    <img src="./assests/img/6.jpg" alt="James Alleh" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-poppins text-lg font-bold text-text-light mb-1">James Alleh</h3>
+                        <p class="text-primary font-semibold text-xs mb-2">Breakout Sessions</p>
+                        <p class="text-text-muted text-xs">Team Lead</p>
+                    </div>
+                </div>
+
+                <!-- Marvellous Oyelade -->
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <img src="./assests/img/7.jpg" alt="Marvellous Oyelade" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-poppins text-lg font-bold text-text-light mb-1">Marvellous Oyelade</h3>
+                        <p class="text-primary font-semibold text-xs mb-2">Energy Challenge</p>
+                        <p class="text-text-muted text-xs">Team Lead</p>
+                    </div>
+                </div>
+
+                <!-- Ebube Orisa -->
+                <div class="group rounded-2xl overflow-hidden border border-primary border-opacity-20 bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="350">
+                    <img src="./assests/img/8.jpg" alt="Ebube Orisa" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-poppins text-lg font-bold text-text-light mb-1">Ebube Orisa</h3>
+                        <p class="text-primary font-semibold text-xs mb-2">Debate Competition</p>
+                        <p class="text-text-muted text-xs">Team Lead</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="./detailpage/committee.html" class="inline-block bg-gradient-to-r from-primary to-primary-dark text-white font-semibold px-8 py-3 rounded-lg hover:shadow-xl hover:shadow-primary/50 transition duration-300 transform hover:-translate-y-1">
+                    <i class="fas fa-users mr-2"></i> View Full Committee
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-white border-t border-b border-slate-200">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">PARTNERSHIPS</span>
+                <h2 class="font-poppins text-4xl font-bold mt-3 mb-4 text-slate-900">Our Sponsors</h2>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Platinum -->
+                <div>
+                    <h4 class="text-center text-primary font-bold uppercase tracking-wider text-sm mb-8">Platinum Partners</h4>
+                    <div class="flex justify-center gap-8">
+                        <div class="bg-white bg-opacity-5 border border-primary border-opacity-20 rounded-lg p-6 min-h-32 flex items-center">
+                            <img src="./assests/img/WEAFRI LOGO.PNG" alt="WEAFRI" class="max-w-xs h-auto">
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-primary border-opacity-20">
+
+                <!-- Gold -->
+                <div>
+                    <h4 class="text-center text-primary font-bold uppercase tracking-wider text-sm mb-8">Gold Partners</h4>
+                    <div class="flex justify-center gap-8">
+                        <div class="bg-white bg-opacity-5 border border-primary border-opacity-20 rounded-lg p-6 min-h-32 flex items-center">
+                            <img src="./assests/img/Workforce Energy Services 2.png" alt="Workforce" class="max-w-xs h-auto">
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-primary border-opacity-20">
+
+                <!-- Silver -->
+                <div>
+                    <h4 class="text-center text-primary font-bold uppercase tracking-wider text-sm mb-8">Silver Partners</h4>
+                    <div class="flex justify-center gap-8 flex-wrap">
+                        <div class="bg-white bg-opacity-5 border border-primary border-opacity-20 rounded-lg p-4 min-h-24 flex items-center">
+                            <img src="./assests/img/vaughn.jpg" alt="Sponsor" class="max-w-sm h-auto">
+                        </div>
+                        <div class="bg-white bg-opacity-5 border border-primary border-opacity-20 rounded-lg p-4 min-h-24 flex items-center">
+                            <img src="./assests/img/save.jpg" alt="Sponsor" class="max-w-sm h-auto">
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-primary border-opacity-20">
+
+                <!-- Bronze -->
+                <div>
+                    <h4 class="text-center text-primary font-bold uppercase tracking-wider text-sm mb-8">Bronze Partners</h4>
+                    <div class="flex justify-center gap-8">
+                        <div class="bg-white bg-opacity-5 border border-primary border-opacity-20 rounded-lg p-4 min-h-24 flex items-center">
+                            <img src="./assests/img/bismuth.jfif" alt="Bismuth" class="max-w-sm h-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-bg border-t border-primary border-opacity-20 py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-10">
+                <div>
+                    <h4 class="text-text-light font-bold text-lg mb-6">For Sponsorship & Enquiries</h4>
+                    <div class="space-y-4 text-text-muted">
+                        <div>
+                            <p class="text-text-light font-semibold mb-1">Joshua</p>
+                            <p class="text-primary font-semibold">+234 703 045 4881</p>
+                        </div>
+                        <div>
+                            <p class="text-text-light font-semibold mb-1">Emmanuella</p>
+                            <p class="text-primary font-semibold">+234 806 957 4540</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-text-light font-bold text-lg mb-6">Follow Us</h4>
+                    <div class="flex gap-3 flex-wrap">
+                        <a href="https://www.linkedin.com/in/spe-port-harcourt-section-bab326110/" target="_blank" class="inline-flex items-center justify-center w-12 h-12 bg-primary bg-opacity-10 border border-primary border-opacity-20 rounded-lg hover:bg-opacity-20 transition">
+                            <i class="fab fa-linkedin text-primary"></i>
+                        </a>
+                        <a href="https://www.instagram.com/spephc/" target="_blank" class="inline-flex items-center justify-center w-12 h-12 bg-primary bg-opacity-10 border border-primary border-opacity-20 rounded-lg hover:bg-opacity-20 transition">
+                            <i class="fab fa-instagram text-primary"></i>
+                        </a>
+                        <a href="https://twitter.com/speypsection103" target="_blank" class="inline-flex items-center justify-center w-12 h-12 bg-primary bg-opacity-10 border border-primary border-opacity-20 rounded-lg hover:bg-opacity-20 transition">
+                            <i class="fab fa-twitter text-primary"></i>
+                        </a>
+                        <a href="https://web.facebook.com/SpeYoungProfessionalsPortHarcourtSection" target="_blank" class="inline-flex items-center justify-center w-12 h-12 bg-primary bg-opacity-10 border border-primary border-opacity-20 rounded-lg hover:bg-opacity-20 transition">
+                            <i class="fab fa-facebook text-primary"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-text-light font-bold text-lg mb-6">Quick Links</h4>
+                    <div class="space-y-2 text-text-muted text-sm">
+                        <a href="https://paystack.com/pay/walqfu4csm" target="_blank" class="flex items-center gap-2 hover:text-primary transition">
+                            <i class="fas fa-arrow-right text-primary text-xs"></i> Register Now
+                        </a>
+                        <a href="https://bit.ly/SPE-EnergyChallenge" target="_blank" class="flex items-center gap-2 hover:text-primary transition">
+                            <i class="fas fa-arrow-right text-primary text-xs"></i> Energy Challenge
+                        </a>
+                        <a href="https://bit.ly/SPE-debate" target="_blank" class="flex items-center gap-2 hover:text-primary transition">
+                            <i class="fas fa-arrow-right text-primary text-xs"></i> Debate Registration
+                        </a>
+                        <a href="./detailpage/committee.html" class="flex items-center gap-2 hover:text-primary transition">
+                            <i class="fas fa-arrow-right text-primary text-xs"></i> Committee Members
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-primary border-opacity-20 mb-6">
+
+            <div class="text-center text-text-muted">
+                <p class="mb-2">© 2025 SPE Young Professionals Symposium, Port Harcourt Section 103. All rights reserved.</p>
+                <p class="text-primary text-sm">Optimizing Energy's Future Together</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./assests/js/CountdownTimer.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assests/js/hideMobileNav.js"></script>
+    <script src="./assests/js/preloadSlides.js"></script>
+    <script src="./assests/js/showNotice.js"></script>
+
+    <script>
+        // Initialize Hero Slider
+        const heroSwiper = new Swiper('.hero-slider', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.hero-next',
+                prevEl: '.hero-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
+            speed: 1000,
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar effects on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                navbar.style.boxShadow = '0 10px 30px rgba(102, 126, 234, 0.1)';
+            } else {
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

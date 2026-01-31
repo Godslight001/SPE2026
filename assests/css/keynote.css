@@ -1,0 +1,85 @@
+.keynote-speaker-container{
+    padding: 5vw 0;
+    background-color: #F2F2F2;
+}
+
+.keynote-speaker-container .keynote-speaker-title{
+    text-align: center;
+}
+
+.keynote-speaker-row{
+    display: flex;
+    align-items: center;
+    margin: 3vw;
+    border: 1px solid gray;
+    background-color: white;
+}
+
+.keynote-speaker-headshot{
+    height: 100%;
+    width: 15vw;
+    margin-right: 5vw;
+}
+
+.keynote-speaker-headshot:hover{
+    filter: brightness(80%);
+}
+
+.keynote-speaker-row .keynote-speaker-bio p{
+    margin-bottom: 0;
+}
+
+.keynote-speaker-row .keynote-speaker-bio p:nth-of-type(1){
+    font-size: 2.5vw;
+    font-weight: bolder;
+}
+
+.keynote-speaker-row .keynote-speaker-bio p:nth-of-type(2){
+    font-size: 1.8vw;
+    font-weight: bold;
+    margin-bottom: 2vw;
+}
+
+.keynote-speaker-row .keynote-speaker-bio p:nth-of-type(3){
+    font-size: 1.4vw;
+    margin-bottom: 1vw;
+}
+
+.keynote-speaker-bio button{
+    margin-bottom: 1vw;
+    font-size: 1vw;
+}
+
+@media only screen and (max-width: 600px)  {
+    .keynote-speaker-container .keynote-speaker-title{
+        font-size: 7vw;
+        margin: 5vw;
+    }
+
+    .keynote-speaker-row{
+        padding-right: 2vw;
+        border-radius: 0 10px 10px 0;
+    }
+    
+    .keynote-speaker-headshot{
+        width: 40vw;
+        margin-right: 3vw;
+    }
+
+    .keynote-speaker-row .keynote-speaker-bio p:nth-of-type(1){
+        font-size: 6vw;
+    }
+    
+    .keynote-speaker-row .keynote-speaker-bio p:nth-of-type(2){
+        font-size: 3.5vw;
+    }
+    
+    .keynote-speaker-row .keynote-speaker-bio p:nth-of-type(3){
+        font-size: 2.3vw;
+        text-align: justify;
+    }
+
+    .keynote-speaker-bio button{
+        font-size: 3vw;
+    }
+}

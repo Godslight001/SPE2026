@@ -1,0 +1,127 @@
+.footer{
+    display: flex;
+    background: #222121;
+    padding: 5vw 0 5vw 5vw;
+    justify-content: space-between;
+}
+
+.footer .reachOut p{
+    font-size: 1.5vw;
+    line-height: 1.528vw;
+    color: #FFFFFF;
+    margin-bottom: 0.764vw;
+}
+
+.symposium-contacts{
+    color: white;
+    font-size: 1.2vw;
+    margin-bottom: 3vw;
+}
+
+.footer .reachOut .reachOutLinks a img{
+    width: 2.083vw;
+    height: 2.083vw;
+    margin-right: 0.7vw;
+}
+
+.footer .footNav{
+    height: 10.951vw;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 3vw;
+    row-gap: 2vw;
+}
+
+.footer .footNav a{
+    width: 13vw;
+    font-size: 1.2vw;
+    color: #FFFFFF;
+}
+
+.footer .footNav a:hover{
+  color: pink;
+}
+
+.footer .footNav a:active{
+  color: pink;
+}
+/* MOBILE VIEW */
+
+@media only screen and (max-width: 600px)  {
+    .footer{
+        flex-direction: column;
+        padding: 10vw 5vw;
+    }
+
+    .symposium-contacts {
+        color: white;
+        font-size: 3.5vw;
+        margin-bottom: 7vw;
+        padding: 0 4vw;
+        line-height: 6vw;
+    }
+
+    .footer .reachOut p{
+        font-size: 4.266vw;
+        line-height: 4.8vw;
+        margin-bottom: 4vw;
+    }
+    
+    .footer .reachOut form{
+        width: 100%;
+        height: 11.2vw;
+        margin-bottom: 12.533vw;
+    }
+    
+    .footer .reachOut form input{
+        width: 65.867vw;
+        border-radius: 1.6vw 0 0 1.6vw;
+        padding: 2.667vw;
+        font-size: 3.2vw;
+        line-height: 3.467vw;
+    }
+    
+    .footer .reachOut form input::placeholder{
+        font-size: 3.2vw;
+        line-height: 3.467vw;
+    }
+    
+    .footer .reachOut form button{
+        width: 23.467vw;
+        border-radius: 0 1.6vw 1.6vw 0;
+        font-size: 3.2vw;
+        line-height: 3.467vw;
+    }
+    
+    .footer .reachOut .reachOutLinks{
+        top: 120vw;
+        width: 74.667vw;
+        margin: auto;
+        text-align: center;
+    }
+
+    .footer .reachOut .reachOutLinks a{
+        width: 8vw;
+        height: 8vw;
+    }
+    
+    .footer .reachOut .reachOutLinks a img{
+        width: 8vw;
+        height: 8vw;
+        margin: 0 2.666vw 4.8vw;
+    }
+    
+    .footer .footNav{
+        height: 50vw;
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 5vw;
+        margin-top: 3vw;
+    }
+    
+    .footer .footNav a{
+        font-size: 3.733vw;
+        line-height: 4.267vw;
+        width: 100%;
+    }
+}
