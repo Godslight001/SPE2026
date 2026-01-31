@@ -1,5 +1,55 @@
 // All speaker and committee member data
 const peopleData = {
+    // Leadership & Hosts
+    'abiye': {
+        name: 'Sir Abiye Pedro',
+        role: 'SPES103 Section Chair',
+        title: 'Symposium Host',
+        focus: 'Leadership & Vision',
+        image: '../assests/img/Abiye 1.jpeg.jpg',
+        bio: 'Sir Abiye Pedro is the Section Chair of SPE Port Harcourt (Section 103), providing visionary leadership and guidance to the future of petroleum professionals in Nigeria. His extensive experience spans multiple decades in the energy sector.',
+        section: 'Leadership',
+        category: 'Leadership',
+        contact: 'abiye@spe.org',
+        linkedin: 'https://linkedin.com/in/abiye-pedro'
+    },
+    'olivier': {
+        name: 'Mr Olivier Houze',
+        role: 'SPE International President',
+        title: 'Symposium Host',
+        focus: 'Global Advocacy',
+        image: '../assests/img/Olivier Houze.jpg',
+        bio: 'Mr Olivier Houze serves as the International President of the Society of Petroleum Engineers, leading global advocacy for petroleum professionals worldwide. His strategic vision shapes the future direction of the organization.',
+        section: 'Leadership',
+        category: 'Leadership',
+        contact: 'olivier@spe.org',
+        linkedin: 'https://linkedin.com/in/olivier-houze'
+    },
+    'riverson': {
+        name: 'Dr Riverson Oppong',
+        role: 'SPE Africa Regional Director',
+        title: 'Special Guest',
+        focus: 'African Operations',
+        image: '../assests/img/Riverson Oppong.jpg',
+        bio: 'Dr Riverson Oppong brings decades of global experience in oil and gas operations as the SPE Africa Regional Director. His insights on African energy development are invaluable to the symposium.',
+        section: 'Leadership',
+        category: 'Leadership',
+        contact: 'riverson@spe.org',
+        linkedin: 'https://linkedin.com/in/riverson-oppong'
+    },
+    'amina': {
+        name: 'Engr. Amina Danmadami, PhD',
+        role: 'SPE Nigerian Council Chair',
+        title: 'Special Guest',
+        focus: 'Regulatory Leadership',
+        image: '../assests/img/Amina Danmadami.jpg',
+        bio: 'Engr. Amina Danmadami, PhD is a Chemical Engineer and the SPE Nigerian Council Chair. She leads regulatory authority initiatives and champions sustainable energy development in Nigeria.',
+        section: 'Leadership',
+        category: 'Leadership',
+        contact: 'amina@spe.org',
+        linkedin: 'https://linkedin.com/in/amina-danmadami'
+    },
+
     // Panel Members
     'joseph-ajienka': {
         name: 'Prof. Joseph A. Ajienka',
