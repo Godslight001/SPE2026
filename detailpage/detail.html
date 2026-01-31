@@ -308,92 +308,8 @@
             <!-- Related Speakers -->
             <div class="mt-12">
                 <h3 class="text-2xl font-bold mb-4">Related Speakers</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <a href="./detail.html?id=joshua" class="related-card flex items-center gap-4 p-3" data-aos="fade-up">
-                        <img src="../assests/img/1.jpg" alt="Joshua" class="w-14 h-14 rounded-full object-cover">
-                        <div>
-                            <p class="font-semibold">Joshua Atte</p>
-                            <p class="text-sm muted">Symposium Chair</p>
-                        </div>
-                    </a>
-
-                    <a href="./detail.html?id=emmanuella" class="related-card flex items-center gap-4 p-3" data-aos="fade-up" data-aos-delay="100">
-                        <img src="../assests/img/3.jpg" alt="Emmanuella" class="w-14 h-14 rounded-full object-cover">
-                        <div>
-                            <p class="font-semibold">Emmanuella Agbo</p>
-                            <p class="text-sm muted">YP Chairperson</p>
-                        </div>
-                    </a>
-
-                    <a href="./detail.html?id=deborah" class="related-card flex items-center gap-4 p-3" data-aos="fade-up" data-aos-delay="200">
-                        <img src="../assests/img/2.jpg" alt="Deborah" class="w-14 h-14 rounded-full object-cover">
-                        <div>
-                            <p class="font-semibold">Deborah Yeezor</p>
-                            <p class="text-sm muted">Symposium Co-chair</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT EVENT -->
-    <section class="py-24 px-6 bg-slate-50">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-4">
-                Why Attend <span class="gradient-text">SPE Symposium 2026</span>
-            </h2>
-            <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-16">
-                Three days of learning, networking, and innovation with top energy professionals.
-            </p>
-
-            <div class="grid md:grid-cols-4 gap-6">
-                <div class="card p-6">
-                    <p class="text-3xl font-bold text-indigo-600">500+</p>
-                    <p class="text-slate-600 mt-2">Attendees</p>
-                </div>
-                <div class="card p-6">
-                    <p class="text-3xl font-bold text-indigo-600">40+</p>
-                    <p class="text-slate-600 mt-2">Speakers</p>
-                </div>
-                <div class="card p-6">
-                    <p class="text-3xl font-bold text-indigo-600">8+</p>
-                    <p class="text-slate-600 mt-2">Sessions</p>
-                </div>
-                <div class="card p-6">
-                    <p class="text-3xl font-bold text-indigo-600">3</p>
-                    <p class="text-slate-600 mt-2">Days</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT EVENT -->
-    <section class="py-24 px-6 bg-slate-50">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-4">
-                Why Attend <span class="gradient-text">SPE Symposium 2026</span>
-            </h2>
-            <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-16">
-                Three days of learning, networking, and innovation with top energy professionals.
-            </p>
-
-            <div class="grid md:grid-cols-4 gap-6">
-                <div class="card p-6">
-                    <p class="text-3xl font-bold text-indigo-600">500+</p>
-                    <p class="text-slate-600 mt-2">Attendees</p>
-                </div>
-                <div class="card p-6">
-                    <p class="text-3xl font-bold text-indigo-600">40+</p>
-                    <p class="text-slate-600 mt-2">Speakers</p>
-                </div>
-                <div class="card p-6">
-                    <p class="text-3xl font-bold text-indigo-600">8+</p>
-                    <p class="text-slate-600 mt-2">Sessions</p>
-                </div>
-                <div class="card p-6">
-                    <p class="text-3xl font-bold text-indigo-600">3</p>
-                    <p class="text-slate-600 mt-2">Days</p>
+                <div id="relatedSpeakersContainer" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <!-- Will be populated dynamically by JavaScript -->
                 </div>
             </div>
         </div>
@@ -431,7 +347,7 @@
                 if (personId && typeof peopleData !== 'undefined' && peopleData[personId]) {
                     const person = peopleData[personId];
                     const linkedinUrl = person.linkedin || 'https://linkedin.com/company/spe';
-                    
+
                     if (linkedinBtn) linkedinBtn.href = linkedinUrl;
                     if (linkedinSidebar) linkedinSidebar.href = linkedinUrl;
                 }

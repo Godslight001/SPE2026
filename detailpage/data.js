@@ -206,7 +206,7 @@ function loadPersonData() {
     document.getElementById('personBio').textContent = person.bio;
     document.getElementById('personFocus').textContent = `${person.focus}`;
     document.getElementById('personSection').textContent = person.section;
-    
+
     // Populate sidebar info
     if (document.getElementById('personFocusInfo')) {
         document.getElementById('personFocusInfo').textContent = person.focus;
@@ -214,14 +214,65 @@ function loadPersonData() {
     if (document.getElementById('personSectionInfo')) {
         document.getElementById('personSectionInfo').textContent = person.section;
     }
-    
+
     // Set LinkedIn URLs
     const linkedinUrl = person.linkedin || 'https://linkedin.com/company/spe';
     const linkedinBtn = document.getElementById('linkedinBtn');
     const linkedinSidebar = document.getElementById('linkedinSidebar');
     if (linkedinBtn) linkedinBtn.href = linkedinUrl;
     if (linkedinSidebar) linkedinSidebar.href = linkedinUrl;
+
+    // Load related speakers
+    loadRelatedSpeakers();
+}
+
+function loadRelatedSpeakers() {
+    const personId = getPersonFromURL();
+    const person = peopleData[personId];
+
+    if (!person) return;
+
+    // Find all people in the same section
+    const relatedPeople = Object.entries(peopleData)
+        .filter(([id, p]) => p.section === person.section && id !== personId)
+        .slice(0, 3); // Limit to 3 related speakers
+
+    const container = document.getElementById('relatedSpeakersContainer');
+    if (!container) return;
+
+    container.innerHTML = ''; // Clear existing content
+
+    if (relatedPeople.length === 0) {
+        container.innerHTML = '<p class="col-span-full text-slate-600">No other speakers in this section.</p>';
+        return;
+    }
+
+    relatedPeople.forEach(([id, relPerson], index) => {
+        const card = document.createElement('a');
+        card.href = `./detail.html?id=${id}`;
+        card.className = 'related-card flex items-center gap-4 p-3';
+        card.setAttribute('data-aos', 'fade-up');
+        if (index > 0) {
+            card.setAttribute('data-aos-delay', (index * 100).toString());
+        }
+
+        card.innerHTML = `
+            <img src="${relPerson.image}" alt="${relPerson.name}" class="w-14 h-14 rounded-full object-cover">
+            <div>
+                <p class="font-semibold">${relPerson.name}</p>
+                <p class="text-sm muted">${relPerson.role}</p>
+            </div>
+        `;
+
+        container.appendChild(card);
+    });
+
+    // Reinitialize AOS for the new elements
+    if (typeof AOS !== 'undefined') {
+        AOS.refresh();
+    }
 }
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', loadPersonData);
+
