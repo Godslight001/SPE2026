@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 mobileMenuBtn.addEventListener('click', function(e) {
                     e.preventDefault();
                     mobileMenu.classList.toggle('hidden');
-                    
+
                     // Change icon on toggle
                     const icon = mobileMenuBtn.querySelector('i');
                     if (icon) {

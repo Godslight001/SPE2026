@@ -275,4 +275,3 @@ function loadRelatedSpeakers() {
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', loadPersonData);
-
