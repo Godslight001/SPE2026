@@ -48,6 +48,37 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
             }
+
+            // Add mobile menu toggle functionality
+            const mobileMenuBtn = headerContainer.querySelector('#mobileMenuBtn');
+            const mobileMenu = headerContainer.querySelector('#mobileMenu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    mobileMenu.classList.toggle('hidden');
+                    
+                    // Change icon on toggle
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                // Close menu when a link is clicked
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuBtn.querySelector('i');
+                        if (icon) {
+                            icon.classList.add('fa-bars');
+                            icon.classList.remove('fa-times');
+                        }
+                    });
+                });
+            }
         })
         .catch(error => console.error('Error loading header:', error));
 
