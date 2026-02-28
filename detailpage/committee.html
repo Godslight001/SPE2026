@@ -1,394 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Web information -->
-    <link rel="icon" href="./../assests/img/spelogo.png" />
-    <title>SPE YP symposium</title>
+    <link rel="icon" href="../assests/img/spelogo.png" />
+    <title>Organizing Committee - SPE YP Symposium 2026</title>
 
-    <!-- Stylesheets -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Josefin Sans"
-      rel="stylesheet"
-    />
-    <link href="https://css.gg/css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./../assests/css/index.css" />
-    <link rel="stylesheet" href="./../assests/css/navbar.css" />
-    <link rel="stylesheet" href="./../assests/css/header.css" />
-    <link rel="stylesheet" href="./../assests/css/theme.css" />
-    <link rel="stylesheet" href="./../assests/css/keynote.css" />
-    <link rel="stylesheet" href="./../assests/css/careerfair.css" />
-    <link rel="stylesheet" href="./../assests/css/energyChallenge.css" />
-    <link rel="stylesheet" href="./../assests/css/debate.css" />
-    <link rel="stylesheet" href="./../assests/css/sponsors.css" />
-    <link rel="stylesheet" href="./../assests/css/footer.css" />
-    <link rel="stylesheet" href="./../assests/css/pastsymposium.css" />
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#667eea",
+                        "primary-dark": "#764ba2",
+                        accent: "#f5576c",
+                        "dark-bg": "#0f172a",
+                        "light-bg": "#1e293b",
+                        "text-light": "#e2e8f0",
+                        "text-muted": "#a0aec0",
+                    },
+                    fontFamily: {
+                        inter: ["Inter", "sans-serif"],
+                        poppins: ["Poppins", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
 
-  <body>
-    <nav class="navbar navbar-light navbar-expand-sm bg-body-tertiary">
-      <div class="container-fluid nv-bar-wrap">
-        <a class="navbar-brand nv-b" href="https://spesymposium2025.netlify.app/">
-          <img src="./../assests/img/spelogo.png" alt="spelogo" id="brandlogo" />
-          <div class="container bl-txt">
-            <p>Society of Petroleum Engineers</p>
-            <p>Port Harcourt, Nigeria (Section 103)</p>
-          </div>
-        </a>
+<body class="bg-gradient-to-br from-dark-bg via-slate-900 to-slate-800 text-text-light overflow-x-hidden">
+    <div id="shared-header"></div>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse nls" id="navbarNav">
-          <ul class="navbar-nav inNav">
-            <li class="nav-item">
-              <a class="nav-link active" href="#panel-section">Panel Session</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link active" href="#breakout-section"
-                >Breakout Session</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#shortCourse-section"
-                >Short Courses</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#energyChallenge-section"
-                >Energy Challenge</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#career-fair-section"
-                >Career Fair</a
-              >
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link active" href="#debate-section">Debate</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link active" href="./detailpage/committee.html">Committee</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link active" href="https://www.spe.org/en/"
-                >About SPE</a
-              >
-            </li>
-
-            <a target="_blank" href="https://paystack.com/pay/walqfu4csm">
-              <button
-                type="button"
-                class="btn btn-primary btn-sm"
-                role="button"
-                id="navRegLink"
-              >
-                REGISTER
-              </button>
-            </a>
-
-            <div id="demo"></div>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <section class="section-container" id="shortCourse-section" style="padding-top: 100px;">
-      <h3 class="section-title">ORGANIZING COMMITTEE</h3>
-      <p class="section-subtitle">Meet the organizing committee</p>
-      <div class="card-section1">
-        <div class="card1">
-          <img src="../assests/img/1.jpg" alt="Person 1" />
-          <div class="card1-container">
-            <h4>Joshua Atte</h4>
-            <p>Symposium Chair/Sponsorship Lead
-            </p>
-          </div>
+    <section class="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-primary/10 blur-3xl"></div>
+            <div class="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-accent/10 blur-3xl"></div>
         </div>
 
-        <div class="card1">
-          <img src="../assests/img/2.jpg" alt="Person 1" />
-          <div class="card1-container">
-            <h4>Deborah Yeezor</h4>
-            <p>Symposium Co-chair/Programs Team Lead
-            </p>
-          </div>
-        </div>
+        <div class="relative max-w-6xl mx-auto">
+            <div class="text-center mb-14" data-aos="fade-up">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">Organizing Team</span>
+                <h1 class="font-poppins text-4xl sm:text-5xl font-bold mt-3 mb-4 gradient-text">Meet Our Committee</h1>
+                <p class="text-text-muted text-lg max-w-2xl mx-auto">
+                    Dedicated professionals delivering the 2026 SPE Young Professional Symposium.
+                </p>
+            </div>
 
-        <div class="card1">
-          <img src="../assests/img/3.jpg" alt="Person 1" />
-          <div class="card1-container">
-            <h4>Emmanuella Agbo</h4>
-            <p>YP Chairperson 
-            </p>
-          </div>
+            <div id="organizing-committee-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
         </div>
-
-        <div class="card1">
-          <img src="../assests/img/4.jpg" alt="Person 1" />
-          <div class="card1-container">
-            <h4>Oloruntoba Isehunwa</h4>
-            <p>Sponsorship Advisor 
-            </p>
-          </div>
-        </div>
-
-        <div class="card1">
-          <img src="../assests/img/5.jpg" alt="Person 1" />
-          <div class="card1-container">
-            <h4>Joel Okoh</h4>
-            <p>Short Course Team Lead
-            </p>
-          </div>
-        </div>
-
-        <div class="card1">
-          <img src="../assests/img/6.jpg" alt="Person 1" />
-          <div class="card1-container">
-            <h4>James Alleh</h4>
-            <p>Breakout Session Team Lead
-            </p>
-          </div>
-        </div>
-
-        <div class="card1">
-          <img src="../assests/img/7.jpg" alt="Person 1" />
-          <div class="card1-container">
-            <h4>Marvellous Oyelade</h4>
-            <p>Energy Challenge Team Lead
-            </p>
-          </div>
-        </div>
-
-        <div class="card1">
-          <img src="../assests/img/8.jpg" alt="Person 1" />
-          <div class="card1-container">
-            <h4>Ebube Orisa</h4>
-            <p>Debate Team Lead
-            </p>
-          </div>
-        </div>
-
-        <div class="card1">
-          <img src="../assests/img/9.jpg" alt="Person 1" />
-          <div class="card1-container">
-            <h4>Precious Vincent</h4>
-            <p>Career Fair Team Lead
-            </p>
-          </div>
-        </div>
-
-        <div class="card1">
-          <img src="../assests/img/10.jpg" alt="Person 1" />
-          <div class="card1-container">
-            <h4>Adam Andrew</h4>
-            <p>Publicity Team Lead 
-            </p>
-          </div>
-        </div>
-
-        <div class="card1">
-          <img src="../assests/img/11.jpg" alt="Person 1" />
-          <div class="card1-container">
-            <h4>Jonah Utoon Enene</h4>
-            <p>Website Design</p>
-          </div>
-        </div>
-
-        <div class="card1">
-          <img src="../assests/img/12.jpg" alt="Person 1" />
-          <div class="card1-container">
-            <h4>Iwowari Christopher</h4>
-            <p>Branding Team Lead</p>
-          </div>
-        </div>
-
-        <div class="card1">
-          <img src="../assests/img/13.jpg" alt="Person 1" />
-          <div class="card1-container">
-            <h4>Kalu David</h4>
-            <p>Venue Management Team Lead
-            </p>
-          </div>
-        </div>
-
-        <div class="card1">
-          <img src="../assests/img/14.jpg" alt="Person 1" />
-          <div class="card1-container">
-            <h4>Gloria Maduabuchi</h4>
-            <p>Entertainment Team Lead 
-            </p>
-          </div>
-        </div>
-
-        <div class="card1">
-          <img src="../assests/img/15.jpg" alt="Person 1" />
-          <div class="card1-container">
-            <h4>Emmanuella Ebere</h4>
-            <p>Ushers/Protocol Team Lead
-            </p>
-          </div>
-        </div>
-
-        <div class="card1">
-          <img src="../assests/img/16.jpg" alt="Person 1" />
-          <div class="card1-container">
-            <h4>Anthigha Eyo</h4>
-            <p>Secretary 
-            </p>
-          </div>
-        </div>
-
-        <div class="card1">
-          <img src="../assests/img/171.jpg" alt="Person 1" />
-          <div class="card1-container">
-            <h4>Daniel Ekeke</h4>
-            <p>Event Flow Lead</p>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section
-      class="sponsors-container"
-      id="sponsor-section"
-    >
-      <h4 class="section-title">OUR SPONSORS</h4>
-      <div  class="sponsors-wrap">
-        <div class="sponsor-category platinum-sponsors">
-          <h6><span>PLATINUM</span> SPONSORS</h6>
-          <div class="sponsor-logo-wrap">
-            <img src="../assests/img/WEAFRI LOGO.PNG" alt="WEAFRI" />
-          </div>
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-b border-slate-200">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-14" data-aos="fade-up">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">Partnerships</span>
+                <h2 class="font-poppins text-4xl font-bold mt-3 mb-4 text-slate-900">Our Sponsors</h2>
+            </div>
+
+            <div class="space-y-12">
+                <div data-aos="fade-up">
+                    <h4 class="text-center text-primary font-bold uppercase tracking-wider text-sm mb-8">Platinum Partners</h4>
+                    <div class="flex justify-center gap-8">
+                        <div class="bg-white border border-primary/20 rounded-lg p-6 min-h-32 flex items-center">
+                            <img src="../assests/img/WEAFRI LOGO.PNG" alt="WEAFRI" class="max-w-xs h-auto" />
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-primary/20" />
+
+                <div data-aos="fade-up">
+                    <h4 class="text-center text-primary font-bold uppercase tracking-wider text-sm mb-8">Gold Partners</h4>
+                    <div class="flex justify-center gap-8">
+                        <div class="bg-white border border-primary/20 rounded-lg p-6 min-h-32 flex items-center">
+                            <img src="../assests/img/Workforce Energy Services 2.png" alt="Workforce Energy Services" class="max-w-xs h-auto" />
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-primary/20" />
+
+                <div data-aos="fade-up">
+                    <h4 class="text-center text-primary font-bold uppercase tracking-wider text-sm mb-8">Silver Partners</h4>
+                    <div class="flex justify-center gap-8 flex-wrap">
+                        <div class="bg-white border border-primary/20 rounded-lg p-4 min-h-24 flex items-center">
+                            <img src="../assests/img/vaughn.jpg" alt="Vaughn" class="max-w-sm h-auto" />
+                        </div>
+                        <div class="bg-white border border-primary/20 rounded-lg p-4 min-h-24 flex items-center">
+                            <img src="../assests/img/save.jpg" alt="Save" class="max-w-sm h-auto" />
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-primary/20" />
+
+                <div data-aos="fade-up">
+                    <h4 class="text-center text-primary font-bold uppercase tracking-wider text-sm mb-8">Bronze Partners</h4>
+                    <div class="flex justify-center gap-8">
+                        <div class="bg-white border border-primary/20 rounded-lg p-4 min-h-24 flex items-center">
+                            <img src="../assests/img/bismuth.jfif" alt="Bismuth" class="max-w-sm h-auto" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <hr class="sponsor-divide" />
-        <div class="sponsor-category gold-sponsors">
-          <h6><span>GOLD</span> SPONSORS</h6>
-          <div class="sponsor-logo-wrap">
-            <img
-              src="../assests/img/Workforce Energy Services 2.png"
-              alt="workforce"
-              id="seaquest"
-            />
-          </div>
-        </div>
-
-        <hr class="sponsor-divide" />
-
-        <div class="sponsor-category silver-sponsors">
-          <h6><span>SILVER</span> SPONSORS</h6>
-          <div class="sponsor-logo-wrap">
-            <img src="../assests/img/vaughn.jpg" alt="">
-            <img src="../assests/img/save.jpg" alt="bismuth"/>
-          </div>
-        </div>
-
-        <hr class="sponsor-divide" />
-
-        <div class="sponsor-category bronze-sponsors">
-          <h6><span>BRONZE</span> SPONSORS</h6>
-          <div class="sponsor-logo-wrap">
-            <img src="../assests/img/bismuth.jfif" alt="bismuth" />
-          </div>
-        </div>
-      </div>
     </section>
 
-    <div class="footer">
-      <div class="reachOut">
-        <p>For Sponsorship / Enquiries</p>
-        <ul class="symposium-contacts">
-          <li><strong>Joshua: </strong>07030454881</li>
-          <li><strong>Emmanuella: </strong>08069574540  </li>
-        </ul>
+    <div id="shared-footer"></div>
 
-        <div class="reachOutLinks">
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/spe-port-harcourt-section-bab326110/"
-            ><img src="./../assests/img/linkedin.svg" alt="logo"
-          /></a>
-          <a target="_blank" href="https://www.instagram.com/spephc/"
-            ><img src="./../assests/img/instagram.svg" alt="logo"
-          /></a>
-          <a target="_blank" href="https://twitter.com/speypsection103"
-            ><img src="./../assests/img/twitter.svg" alt="logo"
-          /></a>
-          <a
-            target="_blank"
-            href="https://web.facebook.com/SpeYoungProfessionalsPortHarcourtSection"
-            ><img src="./../assests/img/facebook.svg" alt="logo"
-          /></a>
-        </div>
-      </div>
-
-      <div class="footNav">
-        <a target="_blank" href="https://paystack.com/pay/walqfu4csm"
-          >• Registration</a
-        >
-        <a target="_blank" href="https://bit.ly/SPE-EnergyChallenge"
-          >• Energy Challenge</a
-        >
-        <a target="_blank" href="#"
-          >• Committee</a
-        >
-        <a target="_blank" href="https://bit.ly/SPE-debate">• Debate</a>
-        <a target="_blank" href="https://www.spe.org/en/">• About us</a>
-        <a
-          target="_blank"
-          style="display: none"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSedRlPo-oYMDk4In3UP3Pnl5kpRoHHQDgDwfXw_AhZDCx4KlQ/viewform"
-          >• Career Fair</a
-        >
-        <a
-          target="_blank"
-          style="display: none;"
-          href="./assests/brochure.pdf"
-          download
-          id="progress-link2"
-          >• Download Brochure</a
-        >
-        <a target="_blank" href="https://getdp.co/NzH">Create Your Own Flyer</a>
-      </div>
-    </div>
-
-    <script src="./assests/js/CountdownTimer.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./assests/js/hideMobileNav.js"></script>
-    <script src="./assests/js/preloadSlides.js"></script>
-    <script src="./assests/js/showNotice.js"></script>
-  </body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../assests/js/shared.js"></script>
+    <script>
+        const committeeMembers = [{
+            image: "../assests/img/1.jpg",
+            name: "Paulin Nwamaka",
+            role: "Young Professional Chair"
+        }, {
+            image: "../assests/img/2.jpg",
+            name: "Deborah Yeezor",
+            role: "Symposium Co-chair//Committee Chair"
+        }, {
+            image: "../assests/img/3.jpg",
+            name: "Collins Okoh",
+            role: "Deputy Committee Chair"
+        }, {
+            image: "../assests/img/4.jpg",
+            name: "Queen Omoghene Moses",
+            role: "Programs Chair"
+        }, {
+            image: "../assests/img/5.jpg",
+            name: "Justus Igwe",
+            role: "CV Review/Website Lead"
+        }, {
+            image: "../assests/img/6.jpg",
+            name: "...",
+            role: "..."
+        }, {
+            image: "../assests/img/7.jpg",
+            name: "Iheanyichukwu Orji",
+            role: "Short Courses Team Lead"
+        }, {
+            image: "../assests/img/8.jpg",
+            name: "Eunice Edeoghon",
+            role: "..."
+        }, {
+            image: "../assests/img/9.jpg",
+            name: "Nicholas Asimiea",
+            role: "..."
+        }, {
+            image: "../assests/img/10.jpg",
+            name: "BIO CHISOM NJOKU",
+            role: "..."
+        }, {
+            image: "../assests/img/11.jpg",
+            name: "Evangeline Ugochukwu",
+            role: "..."
+        }, {
+            image: "../assests/img/12.jpg",
+            name: "Ogoh Patience",
+            role: "Branding and Souvenirs"
+        }, {
+            image: "../assests/img/13.jpg",
+            name: "Daniella Obaze",
+            role: "Media & Publicity"
+        }, ];
+
+        const committeeList = document.getElementById("organizing-committee-list");
+        committeeList.innerHTML = committeeMembers
+            .map(
+                (member, index) => `
+          <div
+            class="group rounded-2xl overflow-hidden border border-primary/20 bg-white/5 hover:bg-white/10 transition duration-300 transform hover:-translate-y-2"
+            data-aos="fade-up"
+            data-aos-delay="${Math.min(index * 50, 350)}"
+          >
+            <img src="${member.image}" alt="${member.name}" class="w-full h-64 object-cover" />
+            <div class="p-4">
+              <h3 class="font-poppins text-lg font-bold text-text-light mb-1">${member.name}</h3>
+              <p class="text-primary font-semibold text-xs">${member.role}</p>
+            </div>
+          </div>
+        `
+            )
+            .join("");
+
+        AOS.init({
+            duration: 800,
+            easing: "ease-in-out",
+            once: true,
+        });
+    </script>
+</body>
+
 </html>
