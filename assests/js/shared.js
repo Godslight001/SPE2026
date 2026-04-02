@@ -4,6 +4,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const pathSegments = window.location.pathname.split('/');
     const isDetailPage = pathSegments.includes('detailpage');
     const basePath = isDetailPage ? '../' : './';
+    const assetPathPrefix = isDetailPage ? '../assests/' : './assests/';
+
+    function normalizeSharedMarkupPaths(container) {
+        container.querySelectorAll('[src], [href]').forEach(element => {
+            ['src', 'href'].forEach(attribute => {
+                const value = element.getAttribute(attribute);
+                if (!value) {
+                    return;
+                }
+
+                if (value.startsWith('../assests/') || value.startsWith('./assests/')) {
+                    const relativeAssetPath = value.replace(/^(\.\.\/|\.\/)assests\//, '');
+                    element.setAttribute(attribute, assetPathPrefix + relativeAssetPath);
+                }
+            });
+        });
+    }
 
     // Load header
     fetch(basePath + 'header.html')
@@ -15,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 headerContainer.id = 'shared-header';
             }
             headerContainer.innerHTML = html;
+            normalizeSharedMarkupPaths(headerContainer);
 
             // Apply navbar styling
             const style = document.createElement('style');
@@ -123,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 footerContainer.id = 'shared-footer';
             }
             footerContainer.innerHTML = html;
+            normalizeSharedMarkupPaths(footerContainer);
         })
         .catch(error => console.error('Error loading footer:', error));
 });
