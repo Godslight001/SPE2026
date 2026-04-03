@@ -96,8 +96,8 @@
         
         .image-ring {
             width: 100%;
-            max-width: 320px;
-            height: 380px;
+            height: 100%;
+            min-height: 420px;
             border-radius: 12px;
             overflow: hidden;
             display: block;
@@ -203,8 +203,13 @@
                 display: none;
             }
             .image-ring {
-                width: 120px;
-                height: 120px;
+                min-height: 320px;
+            }
+        }
+
+        @media (max-width:767px) {
+            .image-ring {
+                min-height: 280px;
             }
         }
     </style>
@@ -223,16 +228,14 @@
                 <defs></defs>
             </svg>
 
-            <div class="grid lg:grid-cols-3 gap-8 items-start">
-                <!-- Left (main) -->
-                <div class="lg:col-span-2">
+            <div class="max-w-5xl mx-auto">
                     <div class="hero-card p-0" data-aos="fade-up">
-                        <div class="grid md:grid-cols-2 gap-0">
+                        <div class="grid md:grid-cols-[320px_minmax(0,1fr)] lg:grid-cols-[360px_minmax(0,1fr)] items-stretch">
                             <div class="image-ring m-0">
                                 <img id="personImage" src="" alt="Speaker Profile" />
                             </div>
 
-                            <div class="p-8 flex flex-col justify-center">
+                            <div class="p-8 md:p-10 flex flex-col justify-center">
                                 <p id="personTitle" class="caps muted"></p>
                                 <h1 id="personName" class="text-3xl sm:text-4xl font-bold gradient-text mt-2"></h1>
                                 <p id="personRole" class="text-base text-slate-700 mt-3"></p>
@@ -256,13 +259,13 @@
 
                     <div class="grid md:grid-cols-2 gap-6 mt-6">
                         <div class="info-card" data-aos="fade-up">
-                            <h3 class="font-semibold text-lg mb-2">Sessions & Topics</h3>
-                            <p class="text-slate-700">This speaker will be contributing to panel discussions and breakout sessions focused on industry best practice, policy, and technical innovation.</p>
+                            <h3 id="personContributionTitle" class="font-semibold text-lg mb-2">Sessions & Topics</h3>
+                            <p id="personContributionText" class="text-slate-700">This speaker will be contributing to panel discussions and breakout sessions focused on industry best practice, policy, and technical innovation.</p>
                         </div>
 
                         <div class="info-card" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="font-semibold text-lg mb-2">Quick Takeaways</h3>
-                            <ul class="list-disc pl-5 text-slate-700 space-y-2 mt-2">
+                            <h3 id="personHighlightsTitle" class="font-semibold text-lg mb-2">Quick Takeaways</h3>
+                            <ul id="personHighlightsList" class="list-disc pl-5 text-slate-700 space-y-2 mt-2">
                                 <li>Real-world insights on industry operations</li>
                                 <li>Career development & mentorship strategies</li>
                                 <li>Technical approaches to optimization</li>
@@ -273,7 +276,7 @@
                 </div>
 
                 <!-- Right (sticky info) -->
-                <aside class="lg:col-span-1" aria-labelledby="info">
+                <aside class="hidden" aria-labelledby="info">
                     <div class="contact-sticky" data-aos="fade-left" style="position:sticky; top:120px;">
                         <p class="caps muted mb-3">Quick Info</p>
 

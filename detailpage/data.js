@@ -29,13 +29,26 @@ const peopleData = {
         name: 'Dr Riverson Oppong',
         role: 'SPE Africa Regional Director',
         title: 'Special Guest',
-        focus: 'African Operations',
+        focus: 'Energy Policy & Transition Strategy',
         image: '../assests/img/Riverson Oppong.jpg',
-        bio: 'Dr Riverson Oppong brings decades of global experience in oil and gas operations as the SPE Africa Regional Director. His insights on African energy development are invaluable to the symposium.',
+        bio: [
+            'Dr Riverson Oppong is a seasoned industry professional with over two decades of global experience spanning upstream and downstream oil and gas, academia, and public policy.',
+            'He has helped shape national policies on energy transition, gas pricing, and energy master planning across Ghana, Africa, the Middle East, and Europe. A renowned expert with a global presence, he has delivered lectures across Europe and Africa and authored three impactful books with more than 500 citations.',
+            'With unflinching dedication to Africa\'s energy sector, he is committed to proffering practical solutions to the continent\'s energy challenges. His contributions have earned him numerous honours, including the 2024 SPE International Century Club Award, the 2023 SPE Regional Management Award, the 2022 SPE Distinguished Service Award, and the Presidential Millennium Excellence Award. In 2022, Gurus and Prospects Magazine named him one of Africa\'s Top 10 Energy Thought Leaders.'
+        ],
+        contributionTitle: 'Expertise & Policy Leadership',
+        contributionText: 'Dr Oppong brings a rare blend of industry execution, academic depth, and policy influence to conversations on Africa\'s energy future, with strong insight into transition strategy, gas pricing, and long-range energy planning.',
+        highlightsTitle: 'Key Highlights',
+        highlights: [
+            'Over two decades of global experience across upstream, downstream, academia, and public policy',
+            'Contributed to national work on energy transition, gas pricing, and master planning',
+            'Author of three books with more than 500 citations and a lecturer across Europe and Africa',
+            'Recipient of major honours including the 2024 SPE International Century Club Award'
+        ],
         section: 'Leadership',
         category: 'Leadership',
         contact: 'riverson@spe.org',
-        linkedin: 'https://linkedin.com/in/riverson-oppong'
+        linkedin: 'https://www.linkedin.com/in/riverson-oppong-phd-08365820'
     },
     'amina': {
         name: 'Engr. Amina Danmadami, PhD',
@@ -253,24 +266,46 @@ function loadPersonData() {
     document.getElementById('personTitle').textContent = person.title;
     document.getElementById('personImage').src = person.image;
     document.getElementById('personImage').alt = person.name;
-    document.getElementById('personBio').textContent = person.bio;
+    const personBio = document.getElementById('personBio');
+    if (personBio) {
+        if (Array.isArray(person.bio)) {
+            personBio.innerHTML = person.bio
+                .map(paragraph => `<p class="mb-4 last:mb-0">${paragraph}</p>`)
+                .join('');
+        } else {
+            personBio.textContent = person.bio;
+        }
+    }
     document.getElementById('personFocus').textContent = `${person.focus}`;
     document.getElementById('personSection').textContent = person.section;
 
-    // Populate sidebar info
-    if (document.getElementById('personFocusInfo')) {
-        document.getElementById('personFocusInfo').textContent = person.focus;
+    if (document.getElementById('personContributionTitle')) {
+        document.getElementById('personContributionTitle').textContent = person.contributionTitle || 'Sessions & Topics';
     }
-    if (document.getElementById('personSectionInfo')) {
-        document.getElementById('personSectionInfo').textContent = person.section;
+    if (document.getElementById('personContributionText')) {
+        document.getElementById('personContributionText').textContent = person.contributionText || 'This speaker will be contributing to panel discussions and breakout sessions focused on industry best practice, policy, and technical innovation.';
+    }
+    if (document.getElementById('personHighlightsTitle')) {
+        document.getElementById('personHighlightsTitle').textContent = person.highlightsTitle || 'Quick Takeaways';
+    }
+    if (document.getElementById('personHighlightsList')) {
+        const highlights = Array.isArray(person.highlights) && person.highlights.length > 0
+            ? person.highlights
+            : [
+                'Real-world insights on industry operations',
+                'Career development & mentorship strategies',
+                'Technical approaches to optimization'
+            ];
+
+        document.getElementById('personHighlightsList').innerHTML = highlights
+            .map(item => `<li>${item}</li>`)
+            .join('');
     }
 
     // Set LinkedIn URLs
     const linkedinUrl = person.linkedin || 'https://linkedin.com/company/spe';
     const linkedinBtn = document.getElementById('linkedinBtn');
-    const linkedinSidebar = document.getElementById('linkedinSidebar');
     if (linkedinBtn) linkedinBtn.href = linkedinUrl;
-    if (linkedinSidebar) linkedinSidebar.href = linkedinUrl;
 
     // Load related speakers
     loadRelatedSpeakers();
