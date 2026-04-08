@@ -2,16 +2,16 @@
 const peopleData = {
     // Leadership & Hosts
     'abiye': {
-        name: 'Sir Abiye Pedro',
+        name: 'Engr. Dr. Pringle Egbe',
         role: 'SPES103 Section Chair',
         title: 'Symposium Host',
         focus: 'Leadership & Vision',
-        image: '../assests/img/Abiye 1.jpeg.jpg',
-        bio: 'Sir Abiye Pedro is the Section Chair of SPE Port Harcourt (Section 103), providing visionary leadership and guidance to the future of petroleum professionals in Nigeria. His extensive experience spans multiple decades in the energy sector.',
+        image: '../assests/img/Egbe.jpeg',
+        bio: 'Engr. Dr. Pringle Egbe is the Section Chair of SPE Port Harcourt Section 103, providing visionary leadership and guidance for the future of petroleum professionals. He brings strategic insight and a strong commitment to professional excellence in the energy sector.',
         section: 'Leadership',
         category: 'Leadership',
-        contact: 'abiye@spe.org',
-        linkedin: 'https://linkedin.com/in/abiye-pedro'
+        contact: 'pringle.egbe@spe.org',
+        linkedin: 'https://linkedin.com/company/spe'
     },
     'olivier': {
         name: 'Mr Olivier Houze',
@@ -119,6 +119,32 @@ const peopleData = {
         section: 'Panel',
         category: 'Expert',
         contact: 'toyin@emeraldergy.com'
+    },
+    'ngozi-adeleke': {
+        name: 'Engr. Ngozi Adeleke',
+        role: 'Pipelines Asset Manager, Renaissance Africa Energy Company',
+        title: 'Panel Session Speaker',
+        focus: 'Operational Excellence & Transformation',
+        image: '../assests/img/Engr. Ngozi Adeleke.jpeg',
+        bio: [
+            'Ngozi Adeleke is a seasoned engineering professional, innovation advocate, and strategic leader with over two decades of diverse experience in the energy industry. She holds a Chemical Engineering degree from the University of Benin, is a COREN-registered engineer, and has an MBA from IE Business School, Madrid. Her career spans impactful roles at Shell Plc, both locally and internationally, and currently at Renaissance Africa Energy Company, where she serves as Pipelines Asset Manager.',
+            'In her current role, Ngozi is reshaping the pipelines narrative by championing a multi-year rejuvenation strategy aimed at delivering sufficient capacity to support 500,000 barrels of oil per day, aligned with the company’s growth ambitions. Under her leadership, the team has achieved 100% pipeline availability and eliminated illegal connections, setting new benchmarks for operational excellence. She leverages digital technologies and simplification principles to drive innovation, enhance asset reliability, and embed sustainability into core business practices.',
+            'Her leadership in commissioning SPDC’s Southern Swamp Associated Gas Gathering Facilities stands as a testament to her ability to deliver high-impact projects that accelerate domestic gas production. She is a recipient of multiple awards and has been widely recognised as a business improvement champion with a history of implementing new initiatives and technologies to strengthen business performance, enhance operational efficiency, and control costs.',
+            'A strong proponent of business transformation, she supports forward-thinking strategies that improve performance and reduce costs. As President of Women in Renaissance (WiRe), she is a passionate advocate for gender parity and women’s development, creating platforms for women to thrive and lead. She is equally committed to mentoring young professionals and building inclusive, high-performing teams. A wife and mother of two, Ngozi brings empathy, resilience, and a growth mindset to every challenge, making her a driving force for innovation and transformation in the energy sector.'
+        ],
+        contributionTitle: 'Leadership & Industry Impact',
+        contributionText: 'Engr. Ngozi Adeleke brings deep insight into pipeline asset management, digital transformation, sustainability, and large-scale operational delivery, with a proven record of translating strategy into measurable business results.',
+        highlightsTitle: 'Key Highlights',
+        highlights: [
+            'Over two decades of experience across Shell Plc and Renaissance Africa Energy Company',
+            'Leading a multi-year rejuvenation strategy to support 500,000 barrels of oil per day',
+            'Delivered 100% pipeline availability and eliminated illegal connections under her leadership',
+            'President of Women in Renaissance and a committed mentor for young professionals'
+        ],
+        section: 'Panel',
+        category: 'Expert',
+        contact: 'ngozi.adeleke@spe.org',
+        linkedin: 'https://linkedin.com/company/spe'
     },
 
     // Breakout Session Leaders
