@@ -274,35 +274,6 @@
                     </div>
 
                 </div>
-
-                <!-- Right (sticky info) -->
-                <aside class="hidden" aria-labelledby="info">
-                    <div class="contact-sticky" data-aos="fade-left" style="position:sticky; top:120px;">
-                        <p class="caps muted mb-3">Quick Info</p>
-
-                        <div class="space-y-4">
-                            <div>
-                                <p class="text-xs muted font-semibold">EXPERTISE</p>
-                                <p id="personFocusInfo" class="font-semibold text-slate-900 mt-1"></p>
-                            </div>
-
-                            <div>
-                                <p class="text-xs muted font-semibold">ROLE</p>
-                                <p id="personSectionInfo" class="font-semibold text-slate-900 mt-1"></p>
-                            </div>
-                        </div>
-
-                        <div class="mt-6 space-y-3">
-                            <a id="linkedinSidebar" class="btn-gradient w-full justify-center inline-flex" href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                        </div>
-
-                        <div class="mt-6 pt-4 border-t border-slate-100">
-                            <p class="text-sm muted">Event</p>
-                            <p class="font-semibold text-slate-900">April 24–26, 2026</p>
-                            <p class="text-sm text-slate-600">Lagos, Nigeria</p>
-                        </div>
-                    </div>
-                </aside>
             </div>
 
             <!-- Related Speakers -->
@@ -340,7 +311,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 const linkedinBtn = document.getElementById('linkedinBtn');
-                const linkedinSidebar = document.getElementById('linkedinSidebar');
                 const params = new URLSearchParams(window.location.search);
                 const personId = params.get('id');
 
@@ -349,7 +319,6 @@
                     const linkedinUrl = person.linkedin || 'https://linkedin.com/company/spe';
 
                     if (linkedinBtn) linkedinBtn.href = linkedinUrl;
-                    if (linkedinSidebar) linkedinSidebar.href = linkedinUrl;
                 }
             }, 200);
         });
@@ -358,3 +327,4 @@
 </body>
 
 </html>
+

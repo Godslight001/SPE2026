@@ -58,8 +58,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add navbar scroll effects
             const navbar = headerContainer.querySelector('nav');
             if (navbar) {
+                const hasHomepageHero = !isDetailPage && !!document.querySelector('.hero-slider');
+
                 const syncHeaderOffset = function() {
-                    headerContainer.style.minHeight = `${navbar.offsetHeight}px`;
+                    headerContainer.style.minHeight = hasHomepageHero ? '0px' : `${navbar.offsetHeight}px`;
                 };
 
                 syncHeaderOffset();

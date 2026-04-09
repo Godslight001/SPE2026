@@ -1,6 +1,5 @@
-// All speaker and committee member data
+// Active speaker data
 const peopleData = {
-    // Leadership & Hosts
     'abiye': {
         name: 'Engr. Dr. Pringle Egbe',
         role: 'SPES103 Section Chair',
@@ -12,18 +11,6 @@ const peopleData = {
         category: 'Leadership',
         contact: 'pringle.egbe@spe.org',
         linkedin: 'https://linkedin.com/company/spe'
-    },
-    'olivier': {
-        name: 'Mr Olivier Houze',
-        role: 'SPE International President',
-        title: 'Symposium Host',
-        focus: 'Global Advocacy',
-        image: '../assests/img/Olivier Houze.jpg',
-        bio: 'Mr Olivier Houze serves as the International President of the Society of Petroleum Engineers, leading global advocacy for petroleum professionals worldwide. His strategic vision shapes the future direction of the organization.',
-        section: 'Leadership',
-        category: 'Leadership',
-        contact: 'olivier@spe.org',
-        linkedin: 'https://linkedin.com/in/olivier-houze'
     },
     'riverson': {
         name: 'Dr Riverson Oppong',
@@ -50,76 +37,6 @@ const peopleData = {
         contact: 'riverson@spe.org',
         linkedin: 'https://www.linkedin.com/in/riverson-oppong-phd-08365820'
     },
-    'amina': {
-        name: 'Engr. Amina Danmadami, PhD',
-        role: 'SPE Nigerian Council Chair',
-        title: 'Special Guest',
-        focus: 'Regulatory Leadership',
-        image: '../assests/img/Amina Danmadami.jpg',
-        bio: 'Engr. Amina Danmadami, PhD is a Chemical Engineer and the SPE Nigerian Council Chair. She leads regulatory authority initiatives and champions sustainable energy development in Nigeria.',
-        section: 'Leadership',
-        category: 'Leadership',
-        contact: 'amina@spe.org',
-        linkedin: 'https://linkedin.com/in/amina-danmadami'
-    },
-
-    // Panel Members
-    'joseph-ajienka': {
-        name: 'Prof. Joseph A. Ajienka',
-        role: 'Professor of Petroleum Engineering',
-        title: 'Panel Session Speaker',
-        focus: 'Talent Development',
-        image: '../assests/img/Joseph A. Ajienka.png',
-        bio: 'Prof. Joseph A. Ajienka is a distinguished Professor of Petroleum Engineering with extensive experience in talent development within the energy sector. His expertise spans reservoir engineering, production optimization, and professional development programs for young engineers.',
-        section: 'Panel',
-        category: 'Expert',
-        contact: 'ajienka@university.edu',
-        linkedin: 'https://linkedin.com/in/josephajienka'
-    },
-    'maji': {
-        name: 'Mojisola Iyamabo',
-        role: 'Gas Consultant, Heirs Energies',
-        title: 'Panel Session Speaker',
-        focus: 'Feedstock Supply',
-        image: '../assests/img/Mojisola Iyamabo.jpg',
-        bio: 'Mojisola Iyamabo is an experienced Gas Consultant at Heirs Energies with deep expertise in feedstock supply chains. She brings valuable insights into the midstream value chain and sustainable gas solutions.',
-        section: 'Panel',
-        category: 'Expert',
-        contact: 'maji@heirsenerges.com'
-    },
-    'austin': {
-        name: 'Mr. Austin Ogbogbo',
-        role: 'Asset Manager, NLNG',
-        title: 'Panel Session Speaker',
-        focus: 'Midstream Development',
-        image: '../assests/img/austin.jpg',
-        bio: 'Austin Ogbogbo is an Asset Manager at Nigeria Liquefied Natural Gas (NLNG) with extensive experience in midstream infrastructure development. He leads critical projects in energy optimization and operational excellence.',
-        section: 'Panel',
-        category: 'Expert',
-        contact: 'austin@nlng.com'
-    },
-    'brown': {
-        name: 'Sir. Bennett Brown',
-        role: 'Assistant Director, NMDPRA',
-        title: 'Panel Session Speaker',
-        focus: 'Regulatory Framework',
-        image: '../assests/img/Sir. Bennett Brown.jpg',
-        bio: 'Sir Bennett Brown serves as Assistant Director at the Nigerian Midstream and Downstream Petroleum Regulatory Authority (NMDPRA). He provides critical insights into regulatory frameworks shaping the energy sector.',
-        section: 'Panel',
-        category: 'Expert',
-        contact: 'brown@nmdpra.gov.ng'
-    },
-    'toyin': {
-        name: 'Dr. Toyin Odutola',
-        role: 'Assistant Director, Emerald Energy',
-        title: 'Panel Session Moderator',
-        focus: 'Energy Solutions',
-        image: '../assests/img/Dr Toyin Odutola.jpg',
-        bio: 'Dr. Toyin Odutola is an Assistant Director at Emerald Energy with a passion for innovative energy solutions. He moderates discussions on the future of energy in Nigeria and West Africa.',
-        section: 'Panel',
-        category: 'Expert',
-        contact: 'toyin@emeraldergy.com'
-    },
     'ngozi-adeleke': {
         name: 'Engr. Ngozi Adeleke',
         role: 'Pipelines Asset Manager, Renaissance Africa Energy Company',
@@ -128,9 +45,9 @@ const peopleData = {
         image: '../assests/img/Engr. Ngozi Adeleke.jpeg',
         bio: [
             'Ngozi Adeleke is a seasoned engineering professional, innovation advocate, and strategic leader with over two decades of diverse experience in the energy industry. She holds a Chemical Engineering degree from the University of Benin, is a COREN-registered engineer, and has an MBA from IE Business School, Madrid. Her career spans impactful roles at Shell Plc, both locally and internationally, and currently at Renaissance Africa Energy Company, where she serves as Pipelines Asset Manager.',
-            'In her current role, Ngozi is reshaping the pipelines narrative by championing a multi-year rejuvenation strategy aimed at delivering sufficient capacity to support 500,000 barrels of oil per day, aligned with the company’s growth ambitions. Under her leadership, the team has achieved 100% pipeline availability and eliminated illegal connections, setting new benchmarks for operational excellence. She leverages digital technologies and simplification principles to drive innovation, enhance asset reliability, and embed sustainability into core business practices.',
-            'Her leadership in commissioning SPDC’s Southern Swamp Associated Gas Gathering Facilities stands as a testament to her ability to deliver high-impact projects that accelerate domestic gas production. She is a recipient of multiple awards and has been widely recognised as a business improvement champion with a history of implementing new initiatives and technologies to strengthen business performance, enhance operational efficiency, and control costs.',
-            'A strong proponent of business transformation, she supports forward-thinking strategies that improve performance and reduce costs. As President of Women in Renaissance (WiRe), she is a passionate advocate for gender parity and women’s development, creating platforms for women to thrive and lead. She is equally committed to mentoring young professionals and building inclusive, high-performing teams. A wife and mother of two, Ngozi brings empathy, resilience, and a growth mindset to every challenge, making her a driving force for innovation and transformation in the energy sector.'
+            'In her current role, Ngozi is reshaping the pipelines narrative by championing a multi-year rejuvenation strategy aimed at delivering sufficient capacity to support 500,000 barrels of oil per day, aligned with the company\'s growth ambitions. Under her leadership, the team has achieved 100% pipeline availability and eliminated illegal connections, setting new benchmarks for operational excellence. She leverages digital technologies and simplification principles to drive innovation, enhance asset reliability, and embed sustainability into core business practices.',
+            'Her leadership in commissioning SPDC\'s Southern Swamp Associated Gas Gathering Facilities stands as a testament to her ability to deliver high-impact projects that accelerate domestic gas production. She is a recipient of multiple awards and has been widely recognised as a business improvement champion with a history of implementing new initiatives and technologies to strengthen business performance, enhance operational efficiency, and control costs.',
+            'A strong proponent of business transformation, she supports forward-thinking strategies that improve performance and reduce costs. As President of Women in Renaissance, she is a passionate advocate for gender parity and women\'s development, creating platforms for women to thrive and lead. She is equally committed to mentoring young professionals and building inclusive, high-performing teams. A wife and mother of two, Ngozi brings empathy, resilience, and a growth mindset to every challenge, making her a driving force for innovation and transformation in the energy sector.'
         ],
         contributionTitle: 'Leadership & Industry Impact',
         contributionText: 'Engr. Ngozi Adeleke brings deep insight into pipeline asset management, digital transformation, sustainability, and large-scale operational delivery, with a proven record of translating strategy into measurable business results.',
@@ -146,41 +63,6 @@ const peopleData = {
         contact: 'ngozi.adeleke@spe.org',
         linkedin: 'https://linkedin.com/company/spe'
     },
-
-    // Breakout Session Leaders
-    'bob': {
-        name: 'Mr. Sepribo N. Bobmanuel',
-        role: 'Process Engineer, Dangote Refinery',
-        title: 'Breakout Session Leader',
-        focus: 'Refined Crude Oil Pricing',
-        image: '../assests/img/Bobmanuel_Sepribo_Nelson.JPG',
-        bio: 'Sepribo Bobmanuel is a Process Engineer at Dangote Refinery, Africa\'s largest refinery. He specializes in refinery processes and pricing strategies for refined products.',
-        section: 'Breakout',
-        category: 'Expert',
-        contact: 'bob@dangote.com'
-    },
-    'chukwudi': {
-        name: 'Mr. Vincent Chukwudi Ndu',
-        role: 'CNG Operations Supervisor',
-        title: 'Breakout Session Leader',
-        focus: 'Sustainable CNG Ecosystem',
-        image: '../assests/img/Picture1.jpg',
-        bio: 'Vincent Chukwudi Ndu leads CNG operations with expertise in building sustainable alternative fuel ecosystems. His work focuses on scaling CNG adoption across Nigeria.',
-        section: 'Breakout',
-        category: 'Expert',
-        contact: 'chukwudi@cngoperations.com'
-    },
-    'raymond': {
-        name: 'Engr. Ezeoma Raymond',
-        role: 'Metering Engineer, TotalEnergies',
-        title: 'Breakout Session Leader',
-        focus: 'Digital Transformation',
-        image: '../assests/img/Ezeoma_Ray_.jpg',
-        bio: 'Ezeoma Raymond is a Metering Engineer at TotalEnergies specializing in digital transformation of energy operations. He brings innovative solutions to modernize energy infrastructure.',
-        section: 'Breakout',
-        category: 'Expert',
-        contact: 'raymond@totalenergies.com'
-    },
     'yetunde': {
         name: 'Engr. Yetunde Mariam Aladeitan, PhD',
         role: 'Assoc. Professor, University of Abuja',
@@ -190,7 +72,7 @@ const peopleData = {
         bio: [
             'Engr. Dr. Yetunde Mariam Aladeitan is a distinguished and multifaceted professional whose career seamlessly bridges academia, industry, and professional leadership in the engineering sector. A Fellow of the Nigerian Society of Engineers and the Nigerian Society of Chemical Engineers, she holds a BSc in Chemical Engineering from Obafemi Awolowo University, an MSc in Oil and Gas Engineering from Robert Gordon University, Aberdeen, a PhD in Petroleum Engineering from the African University of Science and Technology, Abuja, and is currently pursuing an MSc in Engineering Management from the University of Hull and an MBA from MIVA Open University.',
             'With over two decades of robust experience, Dr. Aladeitan has made significant contributions as an Associate Professor at the University of Abuja, where she teaches and mentors the next generation of engineers in Reservoir Engineering and Chemical Engineering Thermodynamics. She also serves as a part-time Petroleum Engineering lecturer at Baze University and the African University of Science and Technology. Concurrently, she is Managing Consultant at Klensfield Environmental Services Limited and NOVASPIRE Energy, providing advisory support on environmental compliance and sustainable practices to the oil and gas industry.',
-            'Her impressive industry background includes work as a Process Engineer at Amazon Energy Limited, where she contributed to major projects for ExxonMobil and the Nigerian Gas Company in areas such as pipeline design, safety analysis, and process optimisation. She currently serves as National Chairman of the Nigerian Institution of Petroleum Engineers (NIPetE), driving strategic initiatives for the advancement of the profession in Nigeria, and is also Programs Chair 2 of SPE Abuja Section.',
+            'Her impressive industry background includes work as a Process Engineer at Amazon Energy Limited, where she contributed to major projects for ExxonMobil and the Nigerian Gas Company in areas such as pipeline design, safety analysis, and process optimisation. She currently serves as National Chairman of the Nigerian Institution of Petroleum Engineers, driving strategic initiatives for the advancement of the profession in Nigeria, and is also Programs Chair 2 of SPE Abuja Section.',
             'An accomplished researcher with numerous publications on reservoir optimisation, enhanced oil recovery, and sustainable energy solutions, Engr. Dr. Yetunde Aladeitan continues to model academic excellence, industry relevance, and professional leadership in shaping the future of engineering in Nigeria and beyond.'
         ],
         contributionTitle: 'Academic, Industry & Professional Leadership',
@@ -261,14 +143,14 @@ const peopleData = {
         image: '../assests/img/Iroghama.jpeg',
         bio: [
             'Iroghama Ogbeifun is the Managing Director and Chief Executive Officer of Starzs Investments Company Limited, where she oversees the management and operations of a fleet of eleven ships operating in deep offshore Nigerian waters to support the oil exploration and production activities of international oil companies.',
-            'She holds a Bachelor\'s degree in Biology and Psychology, as well as an MSc in Public Health. She is an alumnus of Harvard Business School\'s OPM Programme and has certifications in Commercial Risk in Shipping from Lloyd’s Maritime Academy and in ABC of Shipping from the Nigerian Chamber of Shipping.',
+            'She holds a Bachelor\'s degree in Biology and Psychology, as well as an MSc in Public Health. She is an alumnus of Harvard Business School\'s OPM Programme and has certifications in Commercial Risk in Shipping from Lloyd\'s Maritime Academy and in ABC of Shipping from the Nigerian Chamber of Shipping.',
             'In addition to her role at Starzs Investments Company Limited, she is Vice Chairman of Starzs Gas Limited and a Director at Eaglewatch Security Limited. She also serves as Chairman of the Technical Committee of the Ship Owners Association of Nigeria, a Board Trustee of The R.E.A.C.H Nigeria Foundation, a Board member of Lagos Liga, and a Member of the Governing Board of the Nigerian Maritime Administration and Safety Agency.',
             'A passionate advocate for women in the energy sector, she is a Founding Member and Sponsorship Director of the Women in Energy Network. She is a Member of the Institute of Directors, a Fellow of the National Institute of Credit Administration, an Associate Member of WIMBIZ, a Patron of APWEN, and a member of GAIA Africa.',
             'Iroghama is also a serial entrepreneur who founded Hairven, a beauty brand that includes salons, a spa, a makeup studio, and a line of hair care products. She also founded Stratom Concept Limited, a multifaceted company with strategic interests in logistics, construction, and fast-moving consumer goods, operating multiple branches across Lagos and Rivers States.',
             'In 2013, she emerged as the winner of the maiden edition of The Next Titan Entrepreneurial Reality TV Show. Since then, she has received numerous awards recognising her business skills, including Young Entrepreneur of the Year, Outstanding Female Entrepreneur of the Year, The Most Respected CEO in Nigeria in the Maritime category, Amazon of the Maritime Industry, and several leadership and entrepreneurship honours between 2021 and 2025. She is a mother to twin girls and remains deeply committed to mentoring and supporting female entrepreneurs.'
         ],
         contributionTitle: 'Leadership, Entrepreneurship & Industry Influence',
-        contributionText: 'Iroghama brings a compelling perspective on executive leadership, maritime operations, entrepreneurship, and women’s advancement, shaped by real-world experience building and scaling businesses across sectors.',
+        contributionText: 'Iroghama brings a compelling perspective on executive leadership, maritime operations, entrepreneurship, and women\'s advancement, shaped by real-world experience building and scaling businesses across sectors.',
         highlightsTitle: 'Key Highlights',
         highlights: [
             'Managing Director and CEO of Starzs Investments Company Limited, overseeing offshore maritime operations',
@@ -281,8 +163,6 @@ const peopleData = {
         contact: 'iroghama.ogbeifun@spe.org',
         linkedin: 'https://linkedin.com/company/spe'
     },
-
-    // Short Course Instructors
     'jaja': {
         name: 'Engr. Jaja Zina',
         role: 'Lead Trainer for Oil & Gas Softwares, VAST Integrated Solutions Ltd',
@@ -293,7 +173,7 @@ const peopleData = {
             'Engr. Jaja is a dedicated and highly skilled Chemical and Petroleum Engineer with strong expertise in oil and gas process modelling, simulation, and optimization. He possesses solid experience in applying engineering principles and advanced computational tools to analyze and solve complex problems across upstream, midstream, and downstream operations.',
             'Over the years, he has developed significant proficiency in industry-standard software such as Aspen HYSYS, Aspen Plus, UniSim Design, MATLAB, PIPESIM, OLGA, CMG, and ECLIPSE, which he has effectively applied in modelling real-life oil and gas systems including reactors, separation processes, pipelines, and membrane reactor systems.',
             'His technical interests include process design, process modelling, reservoir modelling, production optimization, flow assurance, multiphase flow in pipelines, gas processing, numerical methods, and process optimization, with a strong focus on integrating theoretical knowledge with practical engineering solutions. He has worked extensively on developing mathematical models and solving them using advanced numerical techniques, particularly in MATLAB, for engineering and research applications.',
-            'Engr. Jaja also serves as a lead trainer in Oil and Gas Engineering at VAST Integrated Solutions Ltd, where he has facilitated several professional training programmes covering process simulation, pipeline modelling, reservoir engineering tools, and production system optimization, contributing significantly to capacity development in the oil and gas sector. He holds a Master’s degree in Chemical Engineering and is currently pursuing a PhD in Chemical Engineering. He is a Corporate Member of the Nigerian Society of Engineers and a COREN Certified Engineer, demonstrating his commitment to professional excellence and ethical engineering practice.'
+            'Engr. Jaja also serves as a lead trainer in Oil and Gas Engineering at VAST Integrated Solutions Ltd, where he has facilitated several professional training programmes covering process simulation, pipeline modelling, reservoir engineering tools, and production system optimization, contributing significantly to capacity development in the oil and gas sector. He holds a Master\'s degree in Chemical Engineering and is currently pursuing a PhD in Chemical Engineering. He is a Corporate Member of the Nigerian Society of Engineers and a COREN Certified Engineer, demonstrating his commitment to professional excellence and ethical engineering practice.'
         ],
         contributionTitle: 'Technical Modelling & Capacity Development',
         contributionText: 'Engr. Jaja brings practical and research-driven expertise in process simulation, reservoir modelling, and optimization, with strong experience translating complex engineering tools into industry-relevant training.',
@@ -301,7 +181,7 @@ const peopleData = {
         highlights: [
             'Experienced user of Aspen HYSYS, Aspen Plus, UniSim, MATLAB, PIPESIM, OLGA, CMG, and ECLIPSE',
             'Lead trainer in oil and gas engineering at VAST Integrated Solutions Ltd',
-            'Master’s degree holder in Chemical Engineering and currently pursuing a PhD',
+            'Master\'s degree holder in Chemical Engineering and currently pursuing a PhD',
             'COREN Certified Engineer and Corporate Member of the Nigerian Society of Engineers'
         ],
         section: 'Short Courses',
@@ -319,7 +199,7 @@ const peopleData = {
             'Engr. Emmanuel Uma Nwabueze is an astute IT professional, multidisciplinary engineering suite trainer, and prototype designer, with more than 15 years of extensive training and design experience in CADs, project management, piping and plants, and the oil and gas industry.',
             'Over the years, he has become a renowned consulting asset to many indigenous companies and multinationals for delivering complex projects in challenging environments, optimizing productivity, and working as a resourceful team player in line with professional ethics. After graduating in 2004, he began his professional career with IPAC Technologies in Lagos before joining Maxnet Global Resources Ltd in Port Harcourt, where he rose to the position of Head of Training Operations.',
             'In 2012, he founded VAST Integrated Solutions Ltd, an innovative IT training and engineering design company established to contribute to manpower development and support the Local Content Policy of the Federal Government. Since inception, the company has become widely recognised for the quality of its training and the high standards of its service delivery.',
-            'Engr. Emmanuel Uma Nwabueze hails from Asaga Ohafia in Abia State. He is a graduate of Petroleum Engineering from FUTO with a Master’s degree in Project Management, and he is a member of the Nigerian Society of Engineers, COREN, and the Nigerian Institute of Petroleum and Gas Engineers. He is currently undergoing a PhD degree programme in Project Management.'
+            'Engr. Emmanuel Uma Nwabueze hails from Asaga Ohafia in Abia State. He is a graduate of Petroleum Engineering from FUTO with a Master\'s degree in Project Management, and he is a member of the Nigerian Society of Engineers, COREN, and the Nigerian Institute of Petroleum and Gas Engineers. He is currently undergoing a PhD degree programme in Project Management.'
         ],
         contributionTitle: 'Engineering Design & Professional Training',
         contributionText: 'Engr. Nwabueze combines practical engineering design expertise with long-standing training leadership, helping professionals build competence in plant design, project delivery, and industry software tools.',
@@ -328,7 +208,7 @@ const peopleData = {
             'Over 15 years of experience in training, design, CADs, project management, and plant systems',
             'Founder of VAST Integrated Solutions Ltd',
             'Former Head of Training Operations at Maxnet Global Resources Ltd',
-            'Petroleum Engineering graduate with a Master’s in Project Management and ongoing PhD studies'
+            'Petroleum Engineering graduate with a Master\'s in Project Management and ongoing PhD studies'
         ],
         section: 'Short Courses',
         category: 'Consultant',
@@ -345,7 +225,7 @@ const peopleData = {
             'Oloruntoba Isehunwa is a Lead Wells Engineer Performance and Planning at Renaissance Africa Energy Company, formerly Shell Petroleum Development Company, where he drives performance improvement initiatives to ensure best-in-class execution of wells activities.',
             'He is a Certified Trainer with extensive experience teaching well engineering courses and building competence and capability in well engineers. He is a globally recognized technical coach and an accredited International Well Control Forum Assessor and Instructor, facilitating several technical courses using advanced training simulators and incorporating human factors principles.',
             'He has several years of experience supervising the execution of drilling, completions, and workover activities in different terrains, including complex projects. He is passionate about coaching and mentoring new technical professionals and facilitates well engineering courses as a Visiting Lecturer and Subject Matter Expert to undergraduate and postgraduate students in Nigerian universities.',
-            'Toba holds a Bachelor’s degree with honours in Petroleum Engineering from the University of Ibadan. He is the Convener and Coordinator of IgnitePro Community, a youth development initiative focused on building leadership and capacity in young people, and he is happily married with two daughters.'
+            'Toba holds a Bachelor\'s degree with honours in Petroleum Engineering from the University of Ibadan. He is the Convener and Coordinator of IgnitePro Community, a youth development initiative focused on building leadership and capacity in young people, and he is happily married with two daughters.'
         ],
         contributionTitle: 'Wells Excellence & Technical Coaching',
         contributionText: 'Oloruntoba brings deep experience in wells planning, performance improvement, well control training, and technical mentoring, with a strong record of developing talent and supporting high-quality execution.',
@@ -371,7 +251,7 @@ const peopleData = {
             'Promise Amaechi is a passionate and versatile Data Scientist and AI/ML Engineer with deep expertise in machine learning, data analytics, business intelligence, and AI-powered solution development. As Co-Founder of HP Analytics, he has spent over seven years delivering data-driven solutions that create measurable impact across diverse industries, shaping more than 15 business outcomes through predictive modelling, fraud detection, and advanced analytics.',
             'Over the years, Promise has developed strong proficiency in tools and technologies including Python, R, SQL, Power BI, TensorFlow, PyTorch, Scikit-learn, FastAPI, and AWS, which he has effectively applied in building real-world solutions ranging from AI-powered invoice processing systems to production-ready conversational AI applications integrating OpenAI, Twilio, and Google Calendar.',
             'His technical interests span machine learning, natural language processing, business intelligence, data visualisation, and ethical AI, with a consistent focus on translating complex datasets into actionable insights that drive informed decision-making. He has worked extensively across healthcare, finance, election monitoring, and energy, demonstrating the versatility and societal relevance of his work.',
-            'Promise also serves as a Coding Instructor, Data Science Educator, and Technical Writer at Sobani Resources, where he has facilitated training programmes designed to equip professionals and beginners with practical, job-ready data skills. He is currently pursuing a Master’s degree in Bioethics, with research focused on ethical AI and algorithmic fairness in African healthcare contexts, and remains deeply passionate about teaching, mentorship, and empowering the next generation of data professionals.'
+            'Promise also serves as a Coding Instructor, Data Science Educator, and Technical Writer at Sobani Resources, where he has facilitated training programmes designed to equip professionals and beginners with practical, job-ready data skills. He is currently pursuing a Master\'s degree in Bioethics, with research focused on ethical AI and algorithmic fairness in African healthcare contexts, and remains deeply passionate about teaching, mentorship, and empowering the next generation of data professionals.'
         ],
         contributionTitle: 'AI Innovation & Data Capacity Building',
         contributionText: 'Promise brings a practical blend of data science, AI engineering, and teaching experience, helping learners connect advanced analytics tools to real-world business and social impact.',
@@ -386,72 +266,30 @@ const peopleData = {
         category: 'Specialist',
         contact: 'promise.amaechi@spe.org',
         linkedin: 'https://linkedin.com/company/spe'
-    },
-
-    // Committee Members
-    'joshua': {
-        name: 'Joshua Atte',
-        role: 'Symposium Chair',
-        title: 'Leadership',
-        focus: 'Sponsorship Lead',
-        image: '../assests/img/1.jpg',
-        bio: 'Joshua Atte chairs the 2026 SPE Symposium with a focus on strategic partnerships and sponsorship. He brings leadership experience in coordinating large-scale professional events.',
-        section: 'Committee',
-        category: 'Leadership',
-        contact: 'joshua@spesymposium.org'
-    },
-    'deborah': {
-        name: 'Deborah Yeezor',
-        role: 'Symposium Co-chair',
-        title: 'Leadership',
-        focus: 'Programs Team Lead',
-        image: '../assests/img/2.jpg',
-        bio: 'Deborah Yeezor co-chairs the symposium overseeing programs and content. Her vision ensures diverse, engaging sessions for all attendees.',
-        section: 'Committee',
-        category: 'Leadership',
-        contact: 'deborah@spesymposium.org'
-    },
-    'emmanuella': {
-        name: 'Emmanuella Agbo',
-        role: 'YP Chairperson',
-        title: 'Leadership',
-        focus: 'Young Professionals Engagement',
-        image: '../assests/img/3.jpg',
-        bio: 'Emmanuella Agbo leads the Young Professionals initiative, ensuring the symposium meets the needs and aspirations of emerging energy professionals.',
-        section: 'Committee',
-        category: 'Leadership',
-        contact: 'emmanuella@spesymposium.org'
     }
 };
 
-// Get person ID from URL
 function getPersonFromURL() {
     const params = new URLSearchParams(window.location.search);
     return params.get('id');
 }
 
-// Load and display person data
 function loadPersonData() {
     const personId = getPersonFromURL();
-    console.log('Looking for person ID:', personId);
-    console.log('Available IDs:', Object.keys(peopleData));
     const person = peopleData[personId];
 
     if (!person) {
-        console.error('Person not found for ID:', personId);
         document.body.innerHTML = '<section class="py-24 px-4 text-center"><h1 class="text-4xl font-bold text-red-500">Person not found</h1><p class="text-slate-700 mt-4"><a href="/" class="text-primary hover:underline">Return to home</a></p></section>';
         return;
     }
 
-    console.log('Found person:', person.name);
-
-    // Populate page with person data
     document.title = `${person.name} - SPE Symposium`;
     document.getElementById('personName').textContent = person.name;
     document.getElementById('personRole').textContent = person.role;
     document.getElementById('personTitle').textContent = person.title;
     document.getElementById('personImage').src = person.image;
     document.getElementById('personImage').alt = person.name;
+
     const personBio = document.getElementById('personBio');
     if (personBio) {
         if (Array.isArray(person.bio)) {
@@ -462,7 +300,8 @@ function loadPersonData() {
             personBio.textContent = person.bio;
         }
     }
-    document.getElementById('personFocus').textContent = `${person.focus}`;
+
+    document.getElementById('personFocus').textContent = person.focus;
     document.getElementById('personSection').textContent = person.section;
 
     if (document.getElementById('personContributionTitle')) {
@@ -488,12 +327,10 @@ function loadPersonData() {
             .join('');
     }
 
-    // Set LinkedIn URLs
     const linkedinUrl = person.linkedin || 'https://linkedin.com/company/spe';
     const linkedinBtn = document.getElementById('linkedinBtn');
     if (linkedinBtn) linkedinBtn.href = linkedinUrl;
 
-    // Load related speakers
     loadRelatedSpeakers();
 }
 
@@ -503,15 +340,14 @@ function loadRelatedSpeakers() {
 
     if (!person) return;
 
-    // Find all people in the same section
     const relatedPeople = Object.entries(peopleData)
         .filter(([id, p]) => p.section === person.section && id !== personId)
-        .slice(0, 3); // Limit to 3 related speakers
+        .slice(0, 3);
 
     const container = document.getElementById('relatedSpeakersContainer');
     if (!container) return;
 
-    container.innerHTML = ''; // Clear existing content
+    container.innerHTML = '';
 
     if (relatedPeople.length === 0) {
         container.innerHTML = '<p class="col-span-full text-slate-600">No other speakers in this section.</p>';
@@ -538,11 +374,9 @@ function loadRelatedSpeakers() {
         container.appendChild(card);
     });
 
-    // Reinitialize AOS for the new elements
     if (typeof AOS !== 'undefined') {
         AOS.refresh();
     }
 }
 
-// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', loadPersonData);
