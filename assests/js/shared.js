@@ -58,6 +58,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add navbar scroll effects
             const navbar = headerContainer.querySelector('nav');
             if (navbar) {
+                const syncHeaderOffset = function() {
+                    headerContainer.style.minHeight = `${navbar.offsetHeight}px`;
+                };
+
+                syncHeaderOffset();
+                window.addEventListener('resize', syncHeaderOffset);
+
                 window.addEventListener('scroll', function() {
                     if (window.scrollY > 100) {
                         navbar.style.boxShadow = '0 10px 30px rgba(102, 126, 234, 0.1)';
