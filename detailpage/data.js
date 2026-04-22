@@ -6,7 +6,27 @@ const peopleData = {
         title: 'Symposium Host',
         focus: 'Leadership & Vision',
         image: '../assests/img/Egbe.jpeg',
-        bio: 'Engr. Dr. Pringle Egbe is the Section Chair of SPE Port Harcourt Section 103, providing visionary leadership and guidance for the future of petroleum professionals. He brings strategic insight and a strong commitment to professional excellence in the energy sector.',
+        bio: [
+            'Good morning distinguished guests, esteemed speakers, industry leaders, and our vibrant young professionals.',
+            'On behalf of the Board of Section 103 and all our members, I warmly welcome you to the 2026 Young Professionals Symposium.',
+            'This year\'s symposium brings together a distinguished gathering of professionals, innovators, and emerging leaders who are committed to advancing the future of energy in Africa and beyond. The theme, "Positioning Africa for Global Energy Leadership: Opportunities for Young Professionals in a Changing Energy Landscape," speaks directly to the opportunities and responsibilities before us. It also aligns with our strategic focus for this board year, to lead with impact, uphold excellence, and drive innovation across all our engagements.',
+            'As we participate in this symposium, I encourage everyone to fully take advantage of the wealth of knowledge, experience, and expertise gathered here. We are in a defining moment in the energy industry, one characterized by rapid transformation, technological advancement, and a growing global emphasis on sustainability.',
+            'This symposium has been intentionally designed as a platform for knowledge exchange, professional development, and strategic engagement. Over the course of the sessions, young professionals will gain valuable insights, engage with seasoned experts, and explore forward-looking ideas that will shape both individual careers and the broader energy sector.',
+            'To our young professionals, I encourage you to approach this opportunity with purpose and intention. Remember that career growth requires patience, discipline, and consistency. There are no shortcuts to lasting impact, and each career journey is unique.',
+            'I would like to sincerely acknowledge and appreciate our speakers, sponsors, and the organizing committee for their dedication and invaluable contributions to the success of this event.',
+            'Let us leave here not only inspired, but also ready to lead, ready to innovate, and ready to shape the future of energy in Africa.',
+            'Once again, you are all warmly welcome. I wish you a productive and impactful symposium.',
+            'Thank you.'
+        ],
+        contributionTitle: 'Opening Remarks',
+        contributionText: 'Engr. Dr. Pringle Egbe welcomes participants to the 2026 Young Professionals Symposium with a call to leadership, excellence, innovation, and purposeful professional growth across Africa\'s evolving energy landscape.',
+        highlightsTitle: 'Welcome Focus',
+        highlights: [
+            'A warm official welcome on behalf of SPE Port Harcourt Section 103',
+            'A strong emphasis on Africa\'s opportunity for global energy leadership',
+            'Encouragement for young professionals to grow with purpose, patience, and discipline',
+            'Recognition of speakers, sponsors, and the organising committee for their support'
+        ],
         section: 'Leadership',
         category: 'Leadership',
         contact: 'pringle.egbe@spe.org',
@@ -32,10 +52,64 @@ const peopleData = {
             'Author of three books with more than 500 citations and a lecturer across Europe and Africa',
             'Recipient of major honours including the 2024 SPE International Century Club Award'
         ],
-        section: 'Leadership',
+        section: 'Special Guests',
         category: 'Leadership',
         contact: 'riverson@spe.org',
         linkedin: 'https://www.linkedin.com/in/riverson-oppong-phd-08365820'
+    },
+    'jennifer-miskimins': {
+        name: 'Jennifer Miskimins',
+        role: '2026 SPE President',
+        title: 'Special Guest',
+        focus: 'Petroleum Engineering Leadership & Education',
+        image: '../assests/img/jenniffer.jpeg',
+        bio: [
+            'Jennifer L. Miskimins is a professor and the department head of the petroleum engineering department at the Colorado School of Mines, where she holds the F.H. Mick Merelli and Coterra Energy Distinguished Department Head Chair.',
+            'She has over 30 years of experience in the petroleum industry, beginning with Marathon Oil Company as a production engineer. Miskimins joined the Colorado School of Mines in 2002 and has held several appointments there. From 2013 to 2015, she held a part-time appointment at Mines while working at Barree and Associates, before returning full-time to the university in 2016.',
+            'Miskimins served as the first Completions Technical Director on the SPE International Board of Directors. She was an SPE Distinguished Lecturer in 2010 to 2011 and 2013 to 2014. She received the 2014 SPE Completions Optimization and Technology Award, and in 2022 she was honoured with the SPE Distinguished Achievement Award for Petroleum Engineering Faculty.',
+            'She has served on a variety of conference organising committees, including chairing the 2023 and 2024 SPE Hydraulic Fracturing Conference and Exhibition, and has also contributed as a technical editor for SPE journals. She served as executive editor of Production and Operations for three years and was editor in chief for the 2019 SPE Monograph update, Hydraulic Fracturing: Fundamentals and Advancements.',
+            'Miskimins has served on the AIME Board of Trustees since 2018 as an SPE trustee and was the 2022 AIME president. She holds a BS from the Montana College of Mineral Science and Technology and MS and PhD degrees from the Colorado School of Mines, all in petroleum engineering.'
+        ],
+        contributionTitle: 'Professional Leadership & Academic Impact',
+        contributionText: 'Jennifer Miskimins brings deep industry and academic experience, with a strong record of technical leadership, SPE service, and petroleum engineering faculty excellence.',
+        highlightsTitle: 'Key Highlights',
+        highlights: [
+            '2026 SPE President and former Completions Technical Director on the SPE International Board',
+            'Professor and department head of petroleum engineering at the Colorado School of Mines',
+            'More than 30 years of petroleum industry and academic experience',
+            'Recipient of major SPE honours including the Distinguished Achievement Award for Petroleum Engineering Faculty'
+        ],
+        section: 'Special Guests',
+        category: 'Leadership',
+        contact: 'jennifer.miskimins@spe.org',
+        linkedin: 'https://linkedin.com/company/spe'
+    },
+    'emeka-ene': {
+        name: 'Emeka C. Ene',
+        role: 'CEO, Oida Group',
+        title: 'Keynote Address Speaker',
+        focus: 'Energy Leadership, Gas Strategy & Industry Development',
+        image: '../assests/img/Emeka Ene.jpeg',
+        bio: [
+            'Emeka C. Ene is the CEO of the Oida Group, which includes Oida Energy Limited, Xenergi Limited, Xenoil, and Enugu Industrial Park Free Zone, also known as Enpower FTZ.',
+            'He is the immediate past Chairman of the Exploration and Production Committee of the International Gas Union for the 2022 to 2025 triennium, and previously served as Vice Chairman of the same committee for the 2019 to 2022 triennium. He is also a past director on the board of the World Free Zones Organization, a member of the Institute of Directors Nigeria, and serves on the boards of other companies in the oil and gas industry.',
+            'Emeka has served in several voluntary leadership capacities in Nigeria. He is the immediate past Chairman of the Board of Trustees of the Society of Petroleum Engineers Nigeria Council, a past Chairman of the SPE Nigeria Council, a past Chairman of the Petroleum Technology Association of Nigeria, a past Chairman of SPE Port Harcourt Section 103, and a former member of the Presidential Task Force on Refineries Reform in Nigeria.',
+            'As part of his contribution to technical knowledge and best practices in the energy industry, he has published several technical papers and delivered presentations on trade and entrepreneurship, local content, rigless well intervention, reservoir monitoring, well conformance technology, and natural gas processing. His team won the International Gas Union WGC 2025 regional gas award for Africa for a paper on implementing methane gathering and abatement using carbon financing.',
+            'Emeka also pioneered the launch of the MIND AFRICA Foundation, a non-profit initiative working with rural children between the ages of 10 and 15. The foundation focuses on leadership and lifelong learning, computer-based education, and hands-on skills development.'
+        ],
+        contributionTitle: 'Industry Leadership & Technical Influence',
+        contributionText: 'Emeka C. Ene brings executive leadership across the energy value chain, significant industry service, and a strong record of contributing to gas development, local content, technical best practice, and youth development.',
+        highlightsTitle: 'Key Highlights',
+        highlights: [
+            'CEO of the Oida Group with leadership across multiple energy and industrial businesses',
+            'Immediate past Chairman of the IGU Exploration and Production Committee',
+            'Past Chairman of the SPE Nigeria Council, PETAN, and SPE Port Harcourt Section 103',
+            'Founder of the MIND AFRICA Foundation focused on rural youth development'
+        ],
+        section: 'Keynote',
+        category: 'Leadership',
+        contact: 'emeka.ene@spe.org',
+        linkedin: 'https://linkedin.com/company/spe'
     },
     'ngozi-adeleke': {
         name: 'Engr. Ngozi Adeleke',
@@ -161,6 +235,77 @@ const peopleData = {
         section: 'Fireside Chat',
         category: 'Leader',
         contact: 'iroghama.ogbeifun@spe.org',
+        linkedin: 'https://linkedin.com/company/spe'
+    },
+    'ikwan-ukauku': {
+        name: 'Ikwan Ukauku',
+        role: 'Principal Reservoir Engineer, Heirs Energies',
+        title: 'Fireside Chat Speaker',
+        focus: 'Reservoir Engineering & Upstream Strategy',
+        image: '../assests/img/ikwan.jpeg',
+        bio: [
+            'Engr. Ukauku Ikwan, PhD, is the Principal Reservoir Engineer at Heirs Energies Ltd, bringing over three decades of extensive experience in the oil and gas industry. He previously practiced as Technical Planning and Integration Manager, building a distinguished career across international oil companies, indigenous exploration and production firms, academia, and consultancy.',
+            'Engr. Ikwan holds a PhD in Petroleum Economics and an M.Eng from the University of Port Harcourt, as well as MBA and B.Eng degrees from the Federal University of Technology, Owerri. His professional expertise spans Technical Planning and Integration, Reservoir Engineering, Field Development Studies, Wells and Reservoir Management, Brownfield Excellence for production maximisation, Hydrocarbon Resource Volume Management, and Upstream Petroleum Economics.',
+            'He has held key technical and leadership roles with two major international oil companies, Total and Shell, as well as indigenous E&P companies including Eroton E&P Ltd and Heirs Energies Ltd. A respected technical professional, he has authored several technical papers and has served as a technical reviewer for the Energy Journal of the International Association of Energy Economics and SPE NAICE technical papers.',
+            'He is an active member of the Society of Petroleum Engineers, the Nigerian Society of Engineers, and the Nigerian and International Association of Energy Economics. He is fully registered with COREN and is also a Certified Management Consultant and a Fellow of the Institute of Management Consultants, reflecting his multidisciplinary approach to technical and strategic leadership. He is happily married and blessed with five children.'
+        ],
+        contributionTitle: 'Technical Depth & Strategic Leadership',
+        contributionText: 'Ikwan Ukauku brings a blend of reservoir engineering expertise, field development insight, and upstream planning leadership shaped by decades of service across major operators, indigenous firms, and academia.',
+        highlightsTitle: 'Key Highlights',
+        highlights: [
+            'Over three decades of oil and gas industry experience',
+            'Principal Reservoir Engineer at Heirs Energies with strong technical planning and integration experience',
+            'Worked across Shell, Total, Eroton E&P, Heirs Energies, academia, and consultancy',
+            'COREN-registered engineer, Certified Management Consultant, and Fellow of the Institute of Management Consultants'
+        ],
+        section: 'Fireside Chat',
+        category: 'Expert',
+        contact: 'ikwan.ukauku@spe.org',
+        linkedin: 'https://linkedin.com/company/spe'
+    },
+    'iyen-idienumah': {
+        name: 'Iyen Idienumah',
+        role: 'Country Manager, Testing and Subsea Halliburton',
+        title: 'Fireside Chat Speaker',
+        focus: 'Testing, Subsea Operations & Career Development',
+        image: '../assests/img/iyen.jpeg',
+        bio: [
+            'Iyen is the Country Manager for Testing and Subsea at Halliburton Energy Services Nigeria. She has over 17 years of industry experience in the oil and gas sector, with a strong track record of career progression both within Nigeria and internationally.',
+            'She holds a Bachelor of Engineering degree from the University of Benin and a Master\'s degree in Strategic Planning from Heriot-Watt University.',
+            'Iyen is passionate about self-development and is dedicated to mentoring and coaching young engineers, supporting them in harnessing their potential and building successful careers.'
+        ],
+        contributionTitle: 'Leadership, Growth & Mentorship',
+        contributionText: 'Iyen Idienumah brings practical leadership experience from testing and subsea operations, combined with a strong commitment to self-development and mentoring the next generation of engineers.',
+        highlightsTitle: 'Key Highlights',
+        highlights: [
+            'Country Manager for Testing and Subsea at Halliburton Energy Services Nigeria',
+            'More than 17 years of oil and gas industry experience',
+            'International and local experience with strong career progression',
+            'Committed mentor and coach for young engineers'
+        ],
+        section: 'Fireside Chat',
+        category: 'Leader',
+        contact: 'iyen.idienumah@spe.org',
+        linkedin: 'https://linkedin.com/company/spe'
+    },
+    'dorcas-jimmy': {
+        name: 'Dorcas-Jimmy Otis Kuro',
+        role: 'Technical Sales Engineer / Business Development Associate, Oida Energy Ltd',
+        title: 'Fireside Chat Moderator',
+        focus: 'Moderation & Business Development',
+        image: '../assests/img/Dorcas-Jimmy.png',
+        bio: 'Dorcas-Jimmy Otis Kuro serves as the moderator for the fireside chat and supports the conversation with experience in technical sales and business development within the energy sector.',
+        contributionTitle: 'Moderator Role',
+        contributionText: 'Dorcas-Jimmy Otis Kuro will guide the fireside conversation, helping connect audience interest with the speakers\' experience and perspectives.',
+        highlightsTitle: 'Moderator Snapshot',
+        highlights: [
+            'Fireside chat moderator',
+            'Technical Sales Engineer and Business Development Associate at Oida Energy Ltd',
+            'Supports engaging and focused audience conversation'
+        ],
+        section: 'Fireside Chat',
+        category: 'Moderator',
+        contact: 'dorcas.kuro@spe.org',
         linkedin: 'https://linkedin.com/company/spe'
     },
     'jaja': {
